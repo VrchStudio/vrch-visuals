@@ -1,0 +1,1851 @@
+{
+  "schema_version": 2,
+  "audio_contract_version": 2,
+  "status": "catalog-rebuild-device-review-pending",
+  "scope": "trusted product-baseline definitions with audio signals",
+  "principles": [
+    "The silent preset is a complete visual; audio adds choreography instead of repairing the base look.",
+    "Low, mid, high and onset control different visual dimensions.",
+    "Audio does not drive the global effect amount or replace the source image.",
+    "Sustained energy changes structure or motion smoothly; onset creates a short local accent.",
+    "Every mapping is bounded by the authored parameter range and the shared Audio Response master."
+  ],
+  "signal_definitions": {
+    "audio.v2.low": {
+      "id": "audio.v2.low",
+      "type": "scalar",
+      "optional": true,
+      "default": 0.0
+    },
+    "audio.v2.mid": {
+      "id": "audio.v2.mid",
+      "type": "scalar",
+      "optional": true,
+      "default": 0.0
+    },
+    "audio.v2.high": {
+      "id": "audio.v2.high",
+      "type": "scalar",
+      "optional": true,
+      "default": 0.0
+    },
+    "audio.v2.onset": {
+      "id": "audio.v2.onset",
+      "type": "trigger",
+      "optional": true,
+      "default": 0.0
+    }
+  },
+  "ordinary_input_target_range_fraction": [
+    0.03,
+    0.18
+  ],
+  "trigger_target_range_fraction": [
+    0.02,
+    0.12
+  ],
+  "maximum_sustained_clamp_frame_fraction": 0.05,
+  "entries": [
+    {
+      "scene_id": "vrch.color-halftone",
+      "role": "filter-print-separation",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Dot bodies breathe without changing the print screen.",
+        "mid": "Source-tone contrast opens and closes smoothly.",
+        "high": "Fine screen density arrives with upper-frequency detail.",
+        "onset": "A short screen-angle accent passes through the separated inks.",
+        "spatial_scope": "Per-dot CMY structure; never full-frame brightness.",
+        "strong_input_limit": "The source silhouette and three-colour print remain readable."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-color-dot-size-v2",
+          "param_key": "dot_size",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.025,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 45,
+          "release_ms": 260,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-color-contrast-v2",
+          "param_key": "contrast",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 55,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-color-density-v2",
+          "param_key": "density",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-color-angle-v2",
+          "param_key": "angle",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.008,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 40,
+          "release_ms": 250,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.halftone-dot",
+      "role": "filter-dot-screen",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Dot shape gains mass on low energy.",
+        "mid": "Tone contrast follows sustained musical body.",
+        "high": "Dot density adds crisp surface detail.",
+        "onset": "A brief shape accent articulates transients.",
+        "spatial_scope": "Individual halftone cells.",
+        "strong_input_limit": "Paper and source form stay visible."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-dot-shape-v2",
+          "param_key": "shape",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 45,
+          "release_ms": 260,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-dot-contrast-v2",
+          "param_key": "contrast",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 50,
+          "release_ms": 280,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-dot-density-v2",
+          "param_key": "density",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-dot-shape-v2",
+          "param_key": "shape",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "negative",
+          "attack_ms": 10,
+          "release_ms": 210,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.halftone-circle",
+      "role": "filter-concentric-screen",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Ring width breathes with low-frequency mass.",
+        "mid": "Phase drifts across the rings with musical body.",
+        "high": "Ring count adds fine concentric detail.",
+        "onset": "A short phase ripple marks transients.",
+        "spatial_scope": "Concentric bands, not frame luminance.",
+        "strong_input_limit": "Ink, paper and image tone remain distinct."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-circle-width-v2",
+          "param_key": "width",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 50,
+          "release_ms": 280,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-circle-phase-v2",
+          "param_key": "phase",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 70,
+          "release_ms": 340,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-circle-rings-v2",
+          "param_key": "rings",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-circle-phase-v2",
+          "param_key": "phase",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 260,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.halftone-line",
+      "role": "filter-line-screen",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Line weight grows with low energy.",
+        "mid": "The line field travels with sustained mid energy.",
+        "high": "Spacing opens to reveal fine source detail.",
+        "onset": "A short angle articulation marks attacks.",
+        "spatial_scope": "Directional print lines.",
+        "strong_input_limit": "The source remains recognizable between lines."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-line-width-v2",
+          "param_key": "width",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 45,
+          "release_ms": 260,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-line-motion-v2",
+          "param_key": "motion",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 60,
+          "release_ms": 320,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-line-spacing-v2",
+          "param_key": "spacing",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-line-angle-v2",
+          "param_key": "angle",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 240,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.graphic-pen",
+      "role": "filter-etched-motion",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Stroke scale gains weight with the low band.",
+        "mid": "Stroke direction turns slowly with musical body.",
+        "high": "Roughness reveals fine paper texture.",
+        "onset": "A short contrast accent sharpens an attack.",
+        "spatial_scope": "Hatched strokes and paper grain.",
+        "strong_input_limit": "No random whole-image shaking."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-pen-scale-v2",
+          "param_key": "scale",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 55,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-pen-direction-v2",
+          "param_key": "direction",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 80,
+          "release_ms": 420,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-pen-roughness-v2",
+          "param_key": "roughness",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 200,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-pen-contrast-v2",
+          "param_key": "contrast",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 220,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.stamp",
+      "role": "filter-threshold-print",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Ink coverage grows through the source tones and releases with low-frequency mass.",
+        "mid": "The printed contour gains a bounded spread.",
+        "high": "Fixed paper grain strengthens with upper-frequency detail.",
+        "onset": "The ink briefly shifts against the centered source, then returns to registration.",
+        "spatial_scope": "Printed regions derived from source tone.",
+        "strong_input_limit": "Paper and silhouette do not disappear."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-stamp-threshold-v2",
+          "param_key": "threshold",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.07,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 55,
+          "release_ms": 240,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-stamp-spread-v2",
+          "param_key": "spread",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 60,
+          "release_ms": 280,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-stamp-grain-v2",
+          "param_key": "grain",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-stamp-registration-v2",
+          "param_key": "registration",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 8,
+          "release_ms": 150,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.bitmap",
+      "role": "filter-pixel-quantization",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Pixels become larger on low-frequency weight.",
+        "mid": "Colour levels open with musical body.",
+        "high": "Dither detail appears with upper frequencies.",
+        "onset": "A brief quantization accent marks attacks.",
+        "spatial_scope": "Pixel cells and local dither.",
+        "strong_input_limit": "The source remains readable; pixel detail never reaches the minimum clamp."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-bitmap-pixels-v2",
+          "param_key": "pixels",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "negative",
+          "attack_ms": 50,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-bitmap-levels-v2",
+          "param_key": "levels",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 65,
+          "release_ms": 340,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-bitmap-dither-v2",
+          "param_key": "dither",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-bitmap-levels-v2",
+          "param_key": "levels",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "negative",
+          "attack_ms": 10,
+          "release_ms": 210,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.patchwork",
+      "role": "filter-segmented-motion",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Broad strip structure responds to low energy.",
+        "mid": "Block segmentation follows musical body.",
+        "high": "Seams gain fine surface definition.",
+        "onset": "Segments shift briefly on attacks.",
+        "spatial_scope": "Independent patchwork cells.",
+        "strong_input_limit": "Offsets stay bounded and never displace the entire frame."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-patchwork-strips-v2",
+          "param_key": "strips",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 55,
+          "release_ms": 310,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-patchwork-blocks-v2",
+          "param_key": "blocks",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 65,
+          "release_ms": 340,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-patchwork-seams-v2",
+          "param_key": "seams",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-patchwork-offset-v2",
+          "param_key": "offset",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 230,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.mosaic",
+      "role": "filter-block-quantization",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Mosaic cells broaden with low-frequency mass.",
+        "mid": "Colour levels open with sustained body.",
+        "high": "Cell separation reveals crisp edges.",
+        "onset": "A short level step articulates attacks.",
+        "spatial_scope": "Stable image-derived cells.",
+        "strong_input_limit": "Cells remain stable and the source silhouette stays readable."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-mosaic-blocks-v2",
+          "param_key": "blocks",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "negative",
+          "attack_ms": 55,
+          "release_ms": 320,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-mosaic-levels-v2",
+          "param_key": "levels",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 65,
+          "release_ms": 350,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-mosaic-separation-v2",
+          "param_key": "separation",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-mosaic-levels-v2",
+          "param_key": "levels",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "negative",
+          "attack_ms": 10,
+          "release_ms": 220,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.single-row-stretch",
+      "role": "filter-banded-displacement",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "The active band widens with low energy.",
+        "mid": "The band position glides with musical body.",
+        "high": "Segmentation resolves fine motion detail.",
+        "onset": "Local fragments separate briefly on attacks.",
+        "spatial_scope": "The authored horizontal band only.",
+        "strong_input_limit": "The untouched source remains visible outside the band."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-row-width-v2",
+          "param_key": "band_width",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 50,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-row-position-v2",
+          "param_key": "position",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 85,
+          "release_ms": 430,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-row-segments-v2",
+          "param_key": "segments",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 200,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-row-fragment-v2",
+          "param_key": "fragment",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 240,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.path-blur-dissolve",
+      "role": "filter-directed-trail",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Trail length breathes with low-frequency mass.",
+        "mid": "The trail direction turns smoothly.",
+        "high": "Dissolve texture gains detail.",
+        "onset": "Blur mix receives a short carried-motion accent.",
+        "spatial_scope": "Directional paths derived from local image grain.",
+        "strong_input_limit": "The original source remains carried through every path."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-path-length-v2",
+          "param_key": "length",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 50,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-path-angle-v2",
+          "param_key": "angle",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 90,
+          "release_ms": 450,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-path-dissolve-v2",
+          "param_key": "dissolve",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 200,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-path-blur-v2",
+          "param_key": "blur_mix",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 230,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.channel-shift",
+      "role": "filter-chromatic-direction",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Chromatic separation widens with low energy.",
+        "mid": "The separation direction turns smoothly.",
+        "high": "Edge glow follows upper-frequency detail.",
+        "onset": "A short local separation accent marks attacks.",
+        "spatial_scope": "Source edges and colour channels.",
+        "strong_input_limit": "The centered source channel remains stable."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-channel-offset-v2",
+          "param_key": "offset",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-channel-angle-v2",
+          "param_key": "angle",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.12,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 65,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-channel-glow-v2",
+          "param_key": "glow",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-channel-offset-v2",
+          "param_key": "offset",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.14,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 8,
+          "release_ms": 140,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.hologram",
+      "role": "filter-spectral-scan",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Spectral warp breathes horizontally.",
+        "mid": "Colour separation expands through the source body.",
+        "high": "Scanline density adds fine holographic detail.",
+        "onset": "A local travelling scan band brightens briefly, then returns to the calm hologram.",
+        "spatial_scope": "Warped scanlines and source edges.",
+        "strong_input_limit": "No full-frame flash; source identity remains dominant."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-hologram-warp-v2",
+          "param_key": "warp",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 35,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-hologram-color-v2",
+          "param_key": "color_shift",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 60,
+          "release_ms": 280,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-hologram-scanlines-v2",
+          "param_key": "scanlines",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 26,
+          "release_ms": 170,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-hologram-glow-v2",
+          "param_key": "glow",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 8,
+          "release_ms": 160,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.matrix",
+      "role": "filter-code-rain",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Audience brightness and silhouette presence gather with the bass.",
+        "mid": "Local code sections rupture into displaced columns.",
+        "high": "Glyph edges become brighter and clearer.",
+        "onset": "A narrow scan pulse moves through the reconstructed image.",
+        "spatial_scope": "Source-derived glyph cells, local ruptures and scan strip.",
+        "strong_input_limit": "Bounded presence, rupture, glow and scan preserve audience reconstruction without full-frame flashing."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "matrix-low",
+          "param_key": "presence",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.5,
+          "input_min": 0.025,
+          "input_max": 1,
+          "curve": "linear",
+          "polarity": "positive",
+          "attack_ms": 22,
+          "release_ms": 150,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "matrix-mid",
+          "param_key": "rupture",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.65,
+          "input_min": 0.025,
+          "input_max": 1,
+          "curve": "linear",
+          "polarity": "positive",
+          "attack_ms": 32,
+          "release_ms": 175,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "matrix-high",
+          "param_key": "glow",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.52,
+          "input_min": 0.025,
+          "input_max": 1,
+          "curve": "linear",
+          "polarity": "positive",
+          "attack_ms": 12,
+          "release_ms": 100,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "matrix-onset",
+          "param_key": "scan",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.98,
+          "input_min": 0.025,
+          "input_max": 1,
+          "curve": "linear",
+          "polarity": "positive",
+          "attack_ms": 6,
+          "release_ms": 85,
+          "clamp": true
+        }
+      ],
+      "max_binding_depth": 0.98
+    },
+    {
+      "scene_id": "vrch.glitch",
+      "role": "filter-segmented-glitch",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Low-frequency mass sets the bounded horizontal tear distance.",
+        "mid": "Mid energy changes the rate through a continuous phase clock.",
+        "high": "Chromatic edge separation follows high detail.",
+        "onset": "A short increase in sparse row coverage marks attacks, then returns to the quiet base.",
+        "spatial_scope": "Sparse seeded rows, never the whole frame.",
+        "strong_input_limit": "The center source remains stable between bounded tears."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-glitch-tear-v2",
+          "param_key": "tear",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.12,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 150,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-glitch-rate-v2",
+          "param_key": "rate",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.035,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 60,
+          "release_ms": 240,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-glitch-color-v2",
+          "param_key": "color_shift",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 24,
+          "release_ms": 140,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-glitch-intensity-v2",
+          "param_key": "intensity",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 8,
+          "release_ms": 120,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.embroidery",
+      "role": "filter-thread-field",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Stitch density grows with low-frequency mass.",
+        "mid": "Thread direction turns gradually with musical body.",
+        "high": "Fibre roughness reveals upper-frequency detail.",
+        "onset": "Thread contrast receives a short accent.",
+        "spatial_scope": "Visible stitches and fabric fibres.",
+        "strong_input_limit": "The fabric and subject do not dim or flash as a whole."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-embroidery-density-v2",
+          "param_key": "density",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 50,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-embroidery-direction-v2",
+          "param_key": "direction",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 85,
+          "release_ms": 430,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-embroidery-roughness-v2",
+          "param_key": "roughness",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-embroidery-contrast-v2",
+          "param_key": "contrast",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.03,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 220,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.procedural-field",
+      "role": "generator-layered-flow",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Large field forms expand with bass mass.",
+        "mid": "Layered flow complexity develops with musical body.",
+        "high": "Fine luminous ridges gain glow.",
+        "onset": "Flow speed receives a short directional impulse.",
+        "spatial_scope": "Existing FBM ridges and moving structures.",
+        "strong_input_limit": "No uniform field brightness or whole-frame flash."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-field-scale-v2",
+          "param_key": "scale",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.06,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "negative",
+          "attack_ms": 55,
+          "release_ms": 330,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-field-complexity-v2",
+          "param_key": "complexity",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 70,
+          "release_ms": 370,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-field-glow-v2",
+          "param_key": "glow",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-field-speed-v2",
+          "param_key": "speed",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.05,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 260,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.image-procedural-composite",
+      "role": "mixer-image-grid",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "Grid cells broaden with low-frequency mass.",
+        "mid": "Grid travel follows sustained musical motion.",
+        "high": "Line width reveals fine luminous structure.",
+        "onset": "A moving light sweep receives a short accent.",
+        "spatial_scope": "Grid lines and travelling sweep only.",
+        "strong_input_limit": "The source image remains dominant."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-grid-scale-v2",
+          "param_key": "scale",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "negative",
+          "attack_ms": 55,
+          "release_ms": 330,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-grid-speed-v2",
+          "param_key": "speed",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.1,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 70,
+          "release_ms": 370,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-grid-width-v2",
+          "param_key": "width",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-grid-sweep-v2",
+          "param_key": "sweep",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "positive",
+          "attack_ms": 10,
+          "release_ms": 240,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.procedural-reveal",
+      "role": "mixer-two-source-reveal",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "A readable window expansion and recovery follows low-frequency mass.",
+        "mid": "The calm orbit accelerates continuously without repositioning the accumulated trajectory.",
+        "high": "The organic edge gains fine texture.",
+        "onset": "A short boundary sharpening marks attacks and releases independently of the orbit.",
+        "spatial_scope": "The moving reveal boundary and window only.",
+        "strong_input_limit": "Neither source permanently overtakes the other."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-reveal-size-v2",
+          "param_key": "size",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.16,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 30,
+          "release_ms": 150,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-reveal-motion-v2",
+          "param_key": "motion",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.04,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 80,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-reveal-texture-v2",
+          "param_key": "texture",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.05,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "ease_in",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 140,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-reveal-feather-v2",
+          "param_key": "feather",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.08,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "negative",
+          "attack_ms": 8,
+          "release_ms": 130,
+          "clamp": true
+        }
+      ]
+    },
+    {
+      "scene_id": "vrch.hand-window",
+      "role": "mixer-tracked-glass-window",
+      "signal_ids": [
+        "audio.v2.low",
+        "audio.v2.mid",
+        "audio.v2.high",
+        "audio.v2.onset"
+      ],
+      "simple_controls": [
+        "strength",
+        "low",
+        "mid",
+        "high"
+      ],
+      "choreography": {
+        "low": "The tracked window breathes around the fingertips.",
+        "mid": "Coloured transmission deepens inside the window.",
+        "high": "Glass refraction gains fine surface detail.",
+        "onset": "A briefly sharper boundary concentrates the inner highlight, without moving the hand-defined center.",
+        "spatial_scope": "The hand-defined window only.",
+        "strong_input_limit": "No whole-frame flash and no audio outside the tracked region."
+      },
+      "bindings": [
+        {
+          "binding_version": 2,
+          "binding_id": "low-to-hand-window-size-v2",
+          "param_key": "window_size",
+          "signal_id": "audio.v2.low",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.05,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 35,
+          "release_ms": 190,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "mid-to-hand-window-color-v2",
+          "param_key": "color_mix",
+          "signal_id": "audio.v2.mid",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.16,
+          "input_min": 0.06,
+          "input_max": 0.9,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 60,
+          "release_ms": 300,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "high-to-hand-window-glass-v2",
+          "param_key": "glass_effect",
+          "signal_id": "audio.v2.high",
+          "signal_type": "scalar",
+          "operator": "add",
+          "depth": 0.18,
+          "input_min": 0.06,
+          "input_max": 0.88,
+          "curve": "smoothstep",
+          "polarity": "positive",
+          "attack_ms": 28,
+          "release_ms": 180,
+          "clamp": true
+        },
+        {
+          "binding_version": 2,
+          "binding_id": "onset-to-hand-window-softness-v2",
+          "param_key": "softness",
+          "signal_id": "audio.v2.onset",
+          "signal_type": "trigger",
+          "operator": "add",
+          "depth": 0.12,
+          "input_min": 0.1,
+          "input_max": 1.0,
+          "curve": "ease_out",
+          "polarity": "negative",
+          "attack_ms": 8,
+          "release_ms": 170,
+          "clamp": true
+        }
+      ]
+    }
+  ]
+}

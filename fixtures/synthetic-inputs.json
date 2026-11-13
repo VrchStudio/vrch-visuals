@@ -1,0 +1,4327 @@
+{
+  "schema_version": 1,
+  "recipe": "Deterministic mathematical inputs; no recording or external media.",
+  "fps": 60,
+  "frames": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "audio": {
+        "audio.v2.low": 0.25,
+        "audio.v2.mid": 0.2,
+        "audio.v2.high": 0.15,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.3,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 1,
+      "time": 0.016666666666666666,
+      "audio": {
+        "audio.v2.low": 0.262495,
+        "audio.v2.mid": 0.213989,
+        "audio.v2.high": 0.166467,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.303,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 2,
+      "time": 0.03333333333333333,
+      "audio": {
+        "audio.v2.low": 0.274958,
+        "audio.v2.mid": 0.227909,
+        "audio.v2.high": 0.182734,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.305996,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 3,
+      "time": 0.05,
+      "audio": {
+        "audio.v2.low": 0.28736,
+        "audio.v2.mid": 0.241692,
+        "audio.v2.high": 0.198606,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.308988,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 4,
+      "time": 0.06666666666666667,
+      "audio": {
+        "audio.v2.low": 0.299667,
+        "audio.v2.mid": 0.255271,
+        "audio.v2.high": 0.213891,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.311971,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 5,
+      "time": 0.08333333333333333,
+      "audio": {
+        "audio.v2.low": 0.311851,
+        "audio.v2.mid": 0.26858,
+        "audio.v2.high": 0.228403,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.314944,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 6,
+      "time": 0.1,
+      "audio": {
+        "audio.v2.low": 0.32388,
+        "audio.v2.mid": 0.281552,
+        "audio.v2.high": 0.241968,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.317903,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 7,
+      "time": 0.11666666666666667,
+      "audio": {
+        "audio.v2.low": 0.335724,
+        "audio.v2.mid": 0.294125,
+        "audio.v2.high": 0.25442,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.320846,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 8,
+      "time": 0.13333333333333333,
+      "audio": {
+        "audio.v2.low": 0.347355,
+        "audio.v2.mid": 0.306237,
+        "audio.v2.high": 0.265611,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.32377,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 9,
+      "time": 0.15,
+      "audio": {
+        "audio.v2.low": 0.358741,
+        "audio.v2.mid": 0.317829,
+        "audio.v2.high": 0.275404,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.326673,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 10,
+      "time": 0.16666666666666666,
+      "audio": {
+        "audio.v2.low": 0.369856,
+        "audio.v2.mid": 0.328844,
+        "audio.v2.high": 0.283681,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.329552,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 11,
+      "time": 0.18333333333333332,
+      "audio": {
+        "audio.v2.low": 0.380672,
+        "audio.v2.mid": 0.339227,
+        "audio.v2.high": 0.290342,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.332404,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 12,
+      "time": 0.2,
+      "audio": {
+        "audio.v2.low": 0.391161,
+        "audio.v2.mid": 0.348929,
+        "audio.v2.high": 0.295307,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.335227,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 13,
+      "time": 0.21666666666666667,
+      "audio": {
+        "audio.v2.low": 0.401297,
+        "audio.v2.mid": 0.357901,
+        "audio.v2.high": 0.298516,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.338019,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 14,
+      "time": 0.23333333333333334,
+      "audio": {
+        "audio.v2.low": 0.411054,
+        "audio.v2.mid": 0.366099,
+        "audio.v2.high": 0.299929,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.340776,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 15,
+      "time": 0.25,
+      "audio": {
+        "audio.v2.low": 0.42041,
+        "audio.v2.mid": 0.373485,
+        "audio.v2.high": 0.29953,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.343497,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 16,
+      "time": 0.26666666666666666,
+      "audio": {
+        "audio.v2.low": 0.429339,
+        "audio.v2.mid": 0.38002,
+        "audio.v2.high": 0.297323,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.346178,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 17,
+      "time": 0.2833333333333333,
+      "audio": {
+        "audio.v2.low": 0.43782,
+        "audio.v2.mid": 0.385674,
+        "audio.v2.high": 0.293336,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.348818,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 18,
+      "time": 0.3,
+      "audio": {
+        "audio.v2.low": 0.445832,
+        "audio.v2.mid": 0.390418,
+        "audio.v2.high": 0.287616,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.351414,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 19,
+      "time": 0.31666666666666665,
+      "audio": {
+        "audio.v2.low": 0.453354,
+        "audio.v2.mid": 0.39423,
+        "audio.v2.high": 0.280232,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.353963,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 20,
+      "time": 0.3333333333333333,
+      "audio": {
+        "audio.v2.low": 0.460368,
+        "audio.v2.mid": 0.39709,
+        "audio.v2.high": 0.271274,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.356464,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 21,
+      "time": 0.35,
+      "audio": {
+        "audio.v2.low": 0.466856,
+        "audio.v2.mid": 0.398985,
+        "audio.v2.high": 0.260851,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.358914,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 22,
+      "time": 0.36666666666666664,
+      "audio": {
+        "audio.v2.low": 0.472802,
+        "audio.v2.mid": 0.399905,
+        "audio.v2.high": 0.249087,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.361312,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 23,
+      "time": 0.38333333333333336,
+      "audio": {
+        "audio.v2.low": 0.478191,
+        "audio.v2.mid": 0.399846,
+        "audio.v2.high": 0.236126,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.363654,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 24,
+      "time": 0.4,
+      "audio": {
+        "audio.v2.low": 0.48301,
+        "audio.v2.mid": 0.398809,
+        "audio.v2.high": 0.222123,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.365938,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 25,
+      "time": 0.4166666666666667,
+      "audio": {
+        "audio.v2.low": 0.487246,
+        "audio.v2.mid": 0.396797,
+        "audio.v2.high": 0.207249,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.368164,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 26,
+      "time": 0.43333333333333335,
+      "audio": {
+        "audio.v2.low": 0.49089,
+        "audio.v2.mid": 0.393822,
+        "audio.v2.high": 0.191683,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.370328,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 27,
+      "time": 0.45,
+      "audio": {
+        "audio.v2.low": 0.493931,
+        "audio.v2.mid": 0.389897,
+        "audio.v2.high": 0.175613,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.372429,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 28,
+      "time": 0.4666666666666667,
+      "audio": {
+        "audio.v2.low": 0.496362,
+        "audio.v2.mid": 0.385042,
+        "audio.v2.high": 0.159233,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.374464,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 29,
+      "time": 0.48333333333333334,
+      "audio": {
+        "audio.v2.low": 0.498178,
+        "audio.v2.mid": 0.379281,
+        "audio.v2.high": 0.142742,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.376433,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 30,
+      "time": 0.5,
+      "audio": {
+        "audio.v2.low": 0.499374,
+        "audio.v2.mid": 0.372642,
+        "audio.v2.high": 0.126338,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.378333,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 31,
+      "time": 0.5166666666666667,
+      "audio": {
+        "audio.v2.low": 0.499946,
+        "audio.v2.mid": 0.365157,
+        "audio.v2.high": 0.110221,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.380162,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 32,
+      "time": 0.5333333333333333,
+      "audio": {
+        "audio.v2.low": 0.499893,
+        "audio.v2.mid": 0.356863,
+        "audio.v2.high": 0.094584,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.381919,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 33,
+      "time": 0.55,
+      "audio": {
+        "audio.v2.low": 0.499216,
+        "audio.v2.mid": 0.347801,
+        "audio.v2.high": 0.079617,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.383603,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 34,
+      "time": 0.5666666666666667,
+      "audio": {
+        "audio.v2.low": 0.497916,
+        "audio.v2.mid": 0.338015,
+        "audio.v2.high": 0.065501,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.385211,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 35,
+      "time": 0.5833333333333334,
+      "audio": {
+        "audio.v2.low": 0.495996,
+        "audio.v2.mid": 0.327553,
+        "audio.v2.high": 0.052406,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.386742,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 36,
+      "time": 0.6,
+      "audio": {
+        "audio.v2.low": 0.493462,
+        "audio.v2.mid": 0.316466,
+        "audio.v2.high": 0.040491,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.388196,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 37,
+      "time": 0.6166666666666667,
+      "audio": {
+        "audio.v2.low": 0.490319,
+        "audio.v2.mid": 0.304809,
+        "audio.v2.high": 0.0299,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.38957,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 38,
+      "time": 0.6333333333333333,
+      "audio": {
+        "audio.v2.low": 0.486575,
+        "audio.v2.mid": 0.292638,
+        "audio.v2.high": 0.02076,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.390863,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 39,
+      "time": 0.65,
+      "audio": {
+        "audio.v2.low": 0.48224,
+        "audio.v2.mid": 0.280014,
+        "audio.v2.high": 0.013183,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.392075,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 40,
+      "time": 0.6666666666666666,
+      "audio": {
+        "audio.v2.low": 0.477324,
+        "audio.v2.mid": 0.266998,
+        "audio.v2.high": 0.00726,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.393204,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 41,
+      "time": 0.6833333333333333,
+      "audio": {
+        "audio.v2.low": 0.471841,
+        "audio.v2.mid": 0.253653,
+        "audio.v2.high": 0.003062,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.394249,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 42,
+      "time": 0.7,
+      "audio": {
+        "audio.v2.low": 0.465802,
+        "audio.v2.mid": 0.240046,
+        "audio.v2.high": 0.00064,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.395209,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 43,
+      "time": 0.7166666666666667,
+      "audio": {
+        "audio.v2.low": 0.459225,
+        "audio.v2.mid": 0.226243,
+        "audio.v2.high": 2.3e-05,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.396084,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 44,
+      "time": 0.7333333333333333,
+      "audio": {
+        "audio.v2.low": 0.452124,
+        "audio.v2.mid": 0.212311,
+        "audio.v2.high": 0.00122,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.396872,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 45,
+      "time": 0.75,
+      "audio": {
+        "audio.v2.low": 0.444518,
+        "audio.v2.mid": 0.198319,
+        "audio.v2.high": 0.004215,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.397572,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 46,
+      "time": 0.7666666666666667,
+      "audio": {
+        "audio.v2.low": 0.436426,
+        "audio.v2.mid": 0.184335,
+        "audio.v2.high": 0.008972,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.398185,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 47,
+      "time": 0.7833333333333333,
+      "audio": {
+        "audio.v2.low": 0.427868,
+        "audio.v2.mid": 0.170427,
+        "audio.v2.high": 0.015433,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.39871,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 48,
+      "time": 0.8,
+      "audio": {
+        "audio.v2.low": 0.418866,
+        "audio.v2.mid": 0.156665,
+        "audio.v2.high": 0.023522,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399146,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 49,
+      "time": 0.8166666666666667,
+      "audio": {
+        "audio.v2.low": 0.409441,
+        "audio.v2.mid": 0.143115,
+        "audio.v2.high": 0.033139,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399492,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 50,
+      "time": 0.8333333333333334,
+      "audio": {
+        "audio.v2.low": 0.399618,
+        "audio.v2.mid": 0.129843,
+        "audio.v2.high": 0.044169,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399749,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 51,
+      "time": 0.85,
+      "audio": {
+        "audio.v2.low": 0.389421,
+        "audio.v2.mid": 0.116915,
+        "audio.v2.high": 0.056478,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399917,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 52,
+      "time": 0.8666666666666667,
+      "audio": {
+        "audio.v2.low": 0.378875,
+        "audio.v2.mid": 0.104395,
+        "audio.v2.high": 0.069918,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399994,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 53,
+      "time": 0.8833333333333333,
+      "audio": {
+        "audio.v2.low": 0.368008,
+        "audio.v2.mid": 0.092342,
+        "audio.v2.high": 0.084325,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399982,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 54,
+      "time": 0.9,
+      "audio": {
+        "audio.v2.low": 0.356845,
+        "audio.v2.mid": 0.080817,
+        "audio.v2.high": 0.099527,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399879,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 55,
+      "time": 0.9166666666666666,
+      "audio": {
+        "audio.v2.low": 0.345415,
+        "audio.v2.mid": 0.069875,
+        "audio.v2.high": 0.115338,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399687,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 56,
+      "time": 0.9333333333333333,
+      "audio": {
+        "audio.v2.low": 0.333747,
+        "audio.v2.mid": 0.059571,
+        "audio.v2.high": 0.131569,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399404,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 57,
+      "time": 0.95,
+      "audio": {
+        "audio.v2.low": 0.32187,
+        "audio.v2.mid": 0.049954,
+        "audio.v2.high": 0.148022,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.399033,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 58,
+      "time": 0.9666666666666667,
+      "audio": {
+        "audio.v2.low": 0.309812,
+        "audio.v2.mid": 0.041073,
+        "audio.v2.high": 0.1645,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.398572,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 59,
+      "time": 0.9833333333333333,
+      "audio": {
+        "audio.v2.low": 0.297606,
+        "audio.v2.mid": 0.03297,
+        "audio.v2.high": 0.180802,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.398022,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 60,
+      "time": 1.0,
+      "audio": {
+        "audio.v2.low": 0.28528,
+        "audio.v2.mid": 0.025685,
+        "audio.v2.high": 0.196731,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.397385,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 61,
+      "time": 1.0166666666666666,
+      "audio": {
+        "audio.v2.low": 0.272866,
+        "audio.v2.mid": 0.019254,
+        "audio.v2.high": 0.212096,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.396659,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 62,
+      "time": 1.0333333333333334,
+      "audio": {
+        "audio.v2.low": 0.260395,
+        "audio.v2.mid": 0.013708,
+        "audio.v2.high": 0.22671,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.395847,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 63,
+      "time": 1.05,
+      "audio": {
+        "audio.v2.low": 0.247898,
+        "audio.v2.mid": 0.009074,
+        "audio.v2.high": 0.240397,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.394949,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 64,
+      "time": 1.0666666666666667,
+      "audio": {
+        "audio.v2.low": 0.235406,
+        "audio.v2.mid": 0.005376,
+        "audio.v2.high": 0.252991,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.393965,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 65,
+      "time": 1.0833333333333333,
+      "audio": {
+        "audio.v2.low": 0.222951,
+        "audio.v2.mid": 0.002631,
+        "audio.v2.high": 0.264341,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.392896,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 66,
+      "time": 1.1,
+      "audio": {
+        "audio.v2.low": 0.210564,
+        "audio.v2.mid": 0.000853,
+        "audio.v2.high": 0.274308,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.391744,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 67,
+      "time": 1.1166666666666667,
+      "audio": {
+        "audio.v2.low": 0.198275,
+        "audio.v2.mid": 5e-05,
+        "audio.v2.high": 0.282772,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.390509,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 68,
+      "time": 1.1333333333333333,
+      "audio": {
+        "audio.v2.low": 0.186115,
+        "audio.v2.mid": 0.000227,
+        "audio.v2.high": 0.289632,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.389193,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 69,
+      "time": 1.15,
+      "audio": {
+        "audio.v2.low": 0.174115,
+        "audio.v2.mid": 0.001382,
+        "audio.v2.high": 0.294804,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.387796,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 70,
+      "time": 1.1666666666666667,
+      "audio": {
+        "audio.v2.low": 0.162304,
+        "audio.v2.mid": 0.003509,
+        "audio.v2.high": 0.298225,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.386321,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 71,
+      "time": 1.1833333333333333,
+      "audio": {
+        "audio.v2.low": 0.150713,
+        "audio.v2.mid": 0.0066,
+        "audio.v2.high": 0.299855,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.384768,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 72,
+      "time": 1.2,
+      "audio": {
+        "audio.v2.low": 0.13937,
+        "audio.v2.mid": 0.010637,
+        "audio.v2.high": 0.299673,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.383138,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 73,
+      "time": 1.2166666666666666,
+      "audio": {
+        "audio.v2.low": 0.128303,
+        "audio.v2.mid": 0.015602,
+        "audio.v2.high": 0.297682,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.381434,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 74,
+      "time": 1.2333333333333334,
+      "audio": {
+        "audio.v2.low": 0.117541,
+        "audio.v2.mid": 0.02147,
+        "audio.v2.high": 0.293906,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.379657,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 75,
+      "time": 1.25,
+      "audio": {
+        "audio.v2.low": 0.10711,
+        "audio.v2.mid": 0.028213,
+        "audio.v2.high": 0.288391,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.377807,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 76,
+      "time": 1.2666666666666666,
+      "audio": {
+        "audio.v2.low": 0.097036,
+        "audio.v2.mid": 0.035797,
+        "audio.v2.high": 0.281202,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.375888,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 77,
+      "time": 1.2833333333333334,
+      "audio": {
+        "audio.v2.low": 0.087344,
+        "audio.v2.mid": 0.044185,
+        "audio.v2.high": 0.272428,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.373901,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 78,
+      "time": 1.3,
+      "audio": {
+        "audio.v2.low": 0.078058,
+        "audio.v2.mid": 0.053337,
+        "audio.v2.high": 0.262174,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.371846,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 79,
+      "time": 1.3166666666666667,
+      "audio": {
+        "audio.v2.low": 0.069203,
+        "audio.v2.mid": 0.063207,
+        "audio.v2.high": 0.250563,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.369728,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 80,
+      "time": 1.3333333333333333,
+      "audio": {
+        "audio.v2.low": 0.060799,
+        "audio.v2.mid": 0.073747,
+        "audio.v2.high": 0.237738,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.367546,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 81,
+      "time": 1.35,
+      "audio": {
+        "audio.v2.low": 0.052869,
+        "audio.v2.mid": 0.084905,
+        "audio.v2.high": 0.223851,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.365304,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 82,
+      "time": 1.3666666666666667,
+      "audio": {
+        "audio.v2.low": 0.045431,
+        "audio.v2.mid": 0.096627,
+        "audio.v2.high": 0.209072,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.363003,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 83,
+      "time": 1.3833333333333333,
+      "audio": {
+        "audio.v2.low": 0.038504,
+        "audio.v2.mid": 0.108855,
+        "audio.v2.high": 0.193579,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.360645,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 84,
+      "time": 1.4,
+      "audio": {
+        "audio.v2.low": 0.032106,
+        "audio.v2.mid": 0.12153,
+        "audio.v2.high": 0.177559,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.358233,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 85,
+      "time": 1.4166666666666667,
+      "audio": {
+        "audio.v2.low": 0.026253,
+        "audio.v2.mid": 0.134589,
+        "audio.v2.high": 0.161206,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.355768,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 86,
+      "time": 1.4333333333333333,
+      "audio": {
+        "audio.v2.low": 0.020959,
+        "audio.v2.mid": 0.147969,
+        "audio.v2.high": 0.144718,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.353253,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 87,
+      "time": 1.45,
+      "audio": {
+        "audio.v2.low": 0.016237,
+        "audio.v2.mid": 0.161603,
+        "audio.v2.high": 0.128293,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.350691,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 88,
+      "time": 1.4666666666666666,
+      "audio": {
+        "audio.v2.low": 0.012099,
+        "audio.v2.mid": 0.175425,
+        "audio.v2.high": 0.112131,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.348082,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 89,
+      "time": 1.4833333333333334,
+      "audio": {
+        "audio.v2.low": 0.008557,
+        "audio.v2.mid": 0.189368,
+        "audio.v2.high": 0.096426,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.345431,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 90,
+      "time": 1.5,
+      "audio": {
+        "audio.v2.low": 0.005617,
+        "audio.v2.mid": 0.203363,
+        "audio.v2.high": 0.08137,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.342738,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 91,
+      "time": 1.5166666666666666,
+      "audio": {
+        "audio.v2.low": 0.003289,
+        "audio.v2.mid": 0.217341,
+        "audio.v2.high": 0.067142,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.340007,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 92,
+      "time": 1.5333333333333334,
+      "audio": {
+        "audio.v2.low": 0.001577,
+        "audio.v2.mid": 0.231235,
+        "audio.v2.high": 0.053917,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.33724,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 93,
+      "time": 1.55,
+      "audio": {
+        "audio.v2.low": 0.000486,
+        "audio.v2.mid": 0.244975,
+        "audio.v2.high": 0.041852,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.334439,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 94,
+      "time": 1.5666666666666667,
+      "audio": {
+        "audio.v2.low": 1.9e-05,
+        "audio.v2.mid": 0.258495,
+        "audio.v2.high": 0.031095,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.331608,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 95,
+      "time": 1.5833333333333333,
+      "audio": {
+        "audio.v2.low": 0.000177,
+        "audio.v2.mid": 0.271729,
+        "audio.v2.high": 0.021776,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.328748,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 96,
+      "time": 1.6,
+      "audio": {
+        "audio.v2.low": 0.000959,
+        "audio.v2.mid": 0.284611,
+        "audio.v2.high": 0.014006,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.325862,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 97,
+      "time": 1.6166666666666667,
+      "audio": {
+        "audio.v2.low": 0.002363,
+        "audio.v2.mid": 0.297079,
+        "audio.v2.high": 0.00788,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.322953,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 98,
+      "time": 1.6333333333333333,
+      "audio": {
+        "audio.v2.low": 0.004387,
+        "audio.v2.mid": 0.309071,
+        "audio.v2.high": 0.003472,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.320023,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 99,
+      "time": 1.65,
+      "audio": {
+        "audio.v2.low": 0.007024,
+        "audio.v2.mid": 0.32053,
+        "audio.v2.high": 0.000835,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.317075,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 100,
+      "time": 1.6666666666666667,
+      "audio": {
+        "audio.v2.low": 0.010269,
+        "audio.v2.mid": 0.331397,
+        "audio.v2.high": 1e-06,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.314112,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 101,
+      "time": 1.6833333333333333,
+      "audio": {
+        "audio.v2.low": 0.014113,
+        "audio.v2.mid": 0.341622,
+        "audio.v2.high": 0.000981,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.311136,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 102,
+      "time": 1.7,
+      "audio": {
+        "audio.v2.low": 0.018546,
+        "audio.v2.mid": 0.351152,
+        "audio.v2.high": 0.003762,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.30815,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 103,
+      "time": 1.7166666666666666,
+      "audio": {
+        "audio.v2.low": 0.023558,
+        "audio.v2.mid": 0.359942,
+        "audio.v2.high": 0.00831,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.305157,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 104,
+      "time": 1.7333333333333334,
+      "audio": {
+        "audio.v2.low": 0.029136,
+        "audio.v2.mid": 0.367949,
+        "audio.v2.high": 0.014571,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.302159,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 105,
+      "time": 1.75,
+      "audio": {
+        "audio.v2.low": 0.035266,
+        "audio.v2.mid": 0.375133,
+        "audio.v2.high": 0.02247,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.299159,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 106,
+      "time": 1.7666666666666666,
+      "audio": {
+        "audio.v2.low": 0.041933,
+        "audio.v2.mid": 0.38146,
+        "audio.v2.high": 0.031909,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.29616,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 107,
+      "time": 1.7833333333333334,
+      "audio": {
+        "audio.v2.low": 0.04912,
+        "audio.v2.mid": 0.386897,
+        "audio.v2.high": 0.042777,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.293165,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 108,
+      "time": 1.8,
+      "audio": {
+        "audio.v2.low": 0.056809,
+        "audio.v2.mid": 0.39142,
+        "audio.v2.high": 0.05494,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.290175,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 109,
+      "time": 1.8166666666666667,
+      "audio": {
+        "audio.v2.low": 0.064981,
+        "audio.v2.mid": 0.395004,
+        "audio.v2.high": 0.068252,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.287195,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 110,
+      "time": 1.8333333333333333,
+      "audio": {
+        "audio.v2.low": 0.073615,
+        "audio.v2.mid": 0.397634,
+        "audio.v2.high": 0.082553,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.284225,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 111,
+      "time": 1.85,
+      "audio": {
+        "audio.v2.low": 0.08269,
+        "audio.v2.mid": 0.399295,
+        "audio.v2.high": 0.097669,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.281271,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 112,
+      "time": 1.8666666666666667,
+      "audio": {
+        "audio.v2.low": 0.092183,
+        "audio.v2.mid": 0.39998,
+        "audio.v2.high": 0.113417,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.278332,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 113,
+      "time": 1.8833333333333333,
+      "audio": {
+        "audio.v2.low": 0.102071,
+        "audio.v2.mid": 0.399686,
+        "audio.v2.high": 0.129608,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.275414,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 114,
+      "time": 1.9,
+      "audio": {
+        "audio.v2.low": 0.112329,
+        "audio.v2.mid": 0.398414,
+        "audio.v2.high": 0.146045,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.272518,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 115,
+      "time": 1.9166666666666667,
+      "audio": {
+        "audio.v2.low": 0.12293,
+        "audio.v2.mid": 0.39617,
+        "audio.v2.high": 0.16253,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.269646,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 116,
+      "time": 1.9333333333333333,
+      "audio": {
+        "audio.v2.low": 0.133849,
+        "audio.v2.mid": 0.392965,
+        "audio.v2.high": 0.178863,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.266801,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 117,
+      "time": 1.95,
+      "audio": {
+        "audio.v2.low": 0.145059,
+        "audio.v2.mid": 0.388815,
+        "audio.v2.high": 0.194848,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.263987,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 118,
+      "time": 1.9666666666666666,
+      "audio": {
+        "audio.v2.low": 0.156531,
+        "audio.v2.mid": 0.38374,
+        "audio.v2.high": 0.21029,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.261205,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 119,
+      "time": 1.9833333333333334,
+      "audio": {
+        "audio.v2.low": 0.168236,
+        "audio.v2.mid": 0.377765,
+        "audio.v2.high": 0.225004,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.258458,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 120,
+      "time": 2.0,
+      "audio": {
+        "audio.v2.low": 0.180146,
+        "audio.v2.mid": 0.37092,
+        "audio.v2.high": 0.238811,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.255748,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 121,
+      "time": 2.0166666666666666,
+      "audio": {
+        "audio.v2.low": 0.192231,
+        "audio.v2.mid": 0.363237,
+        "audio.v2.high": 0.251545,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.253078,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 122,
+      "time": 2.033333333333333,
+      "audio": {
+        "audio.v2.low": 0.204459,
+        "audio.v2.mid": 0.354755,
+        "audio.v2.high": 0.263051,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.25045,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 123,
+      "time": 2.05,
+      "audio": {
+        "audio.v2.low": 0.216802,
+        "audio.v2.mid": 0.345515,
+        "audio.v2.high": 0.27319,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.247867,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 124,
+      "time": 2.066666666666667,
+      "audio": {
+        "audio.v2.low": 0.229228,
+        "audio.v2.mid": 0.335562,
+        "audio.v2.high": 0.281841,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.245331,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 125,
+      "time": 2.0833333333333335,
+      "audio": {
+        "audio.v2.low": 0.241705,
+        "audio.v2.mid": 0.324945,
+        "audio.v2.high": 0.288897,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.242844,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 126,
+      "time": 2.1,
+      "audio": {
+        "audio.v2.low": 0.254203,
+        "audio.v2.mid": 0.313716,
+        "audio.v2.high": 0.294275,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.240408,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 127,
+      "time": 2.1166666666666667,
+      "audio": {
+        "audio.v2.low": 0.266691,
+        "audio.v2.mid": 0.30193,
+        "audio.v2.high": 0.297909,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.238026,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 128,
+      "time": 2.1333333333333333,
+      "audio": {
+        "audio.v2.low": 0.279137,
+        "audio.v2.mid": 0.289645,
+        "audio.v2.high": 0.299755,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.2357,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 129,
+      "time": 2.15,
+      "audio": {
+        "audio.v2.low": 0.291511,
+        "audio.v2.mid": 0.276921,
+        "audio.v2.high": 0.299791,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.233432,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 130,
+      "time": 2.1666666666666665,
+      "audio": {
+        "audio.v2.low": 0.30378,
+        "audio.v2.mid": 0.26382,
+        "audio.v2.high": 0.298016,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.231223,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 131,
+      "time": 2.183333333333333,
+      "audio": {
+        "audio.v2.low": 0.315915,
+        "audio.v2.mid": 0.250406,
+        "audio.v2.high": 0.294452,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.229077,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 132,
+      "time": 2.2,
+      "audio": {
+        "audio.v2.low": 0.327885,
+        "audio.v2.mid": 0.236746,
+        "audio.v2.high": 0.289142,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.226994,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 133,
+      "time": 2.216666666666667,
+      "audio": {
+        "audio.v2.low": 0.339661,
+        "audio.v2.mid": 0.222905,
+        "audio.v2.high": 0.282149,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.224977,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 134,
+      "time": 2.2333333333333334,
+      "audio": {
+        "audio.v2.low": 0.351212,
+        "audio.v2.mid": 0.208953,
+        "audio.v2.high": 0.27356,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.223028,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 135,
+      "time": 2.25,
+      "audio": {
+        "audio.v2.low": 0.362511,
+        "audio.v2.mid": 0.194956,
+        "audio.v2.high": 0.263477,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.221147,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 136,
+      "time": 2.2666666666666666,
+      "audio": {
+        "audio.v2.low": 0.373528,
+        "audio.v2.mid": 0.180984,
+        "audio.v2.high": 0.252022,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.219338,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 137,
+      "time": 2.283333333333333,
+      "audio": {
+        "audio.v2.low": 0.384237,
+        "audio.v2.mid": 0.167106,
+        "audio.v2.high": 0.239334,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.217602,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 138,
+      "time": 2.3,
+      "audio": {
+        "audio.v2.low": 0.39461,
+        "audio.v2.mid": 0.153388,
+        "audio.v2.high": 0.225566,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.215939,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 139,
+      "time": 2.316666666666667,
+      "audio": {
+        "audio.v2.low": 0.404622,
+        "audio.v2.mid": 0.139899,
+        "audio.v2.high": 0.210885,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.214352,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 140,
+      "time": 2.3333333333333335,
+      "audio": {
+        "audio.v2.low": 0.414247,
+        "audio.v2.mid": 0.126704,
+        "audio.v2.high": 0.195468,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.212842,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 141,
+      "time": 2.35,
+      "audio": {
+        "audio.v2.low": 0.423461,
+        "audio.v2.mid": 0.113868,
+        "audio.v2.high": 0.179501,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.211411,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 142,
+      "time": 2.3666666666666667,
+      "audio": {
+        "audio.v2.low": 0.432242,
+        "audio.v2.mid": 0.101454,
+        "audio.v2.high": 0.163177,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.210059,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 143,
+      "time": 2.3833333333333333,
+      "audio": {
+        "audio.v2.low": 0.440568,
+        "audio.v2.mid": 0.089523,
+        "audio.v2.high": 0.146695,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.208789,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 144,
+      "time": 2.4,
+      "audio": {
+        "audio.v2.low": 0.448417,
+        "audio.v2.mid": 0.078133,
+        "audio.v2.high": 0.130252,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.2076,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 145,
+      "time": 2.4166666666666665,
+      "audio": {
+        "audio.v2.low": 0.45577,
+        "audio.v2.mid": 0.06734,
+        "audio.v2.high": 0.114048,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.206495,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 146,
+      "time": 2.433333333333333,
+      "audio": {
+        "audio.v2.low": 0.462609,
+        "audio.v2.mid": 0.057196,
+        "audio.v2.high": 0.098278,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.205473,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 147,
+      "time": 2.45,
+      "audio": {
+        "audio.v2.low": 0.468917,
+        "audio.v2.mid": 0.047752,
+        "audio.v2.high": 0.083134,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.204537,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 148,
+      "time": 2.466666666666667,
+      "audio": {
+        "audio.v2.low": 0.474677,
+        "audio.v2.mid": 0.039054,
+        "audio.v2.high": 0.068798,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.203687,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 149,
+      "time": 2.4833333333333334,
+      "audio": {
+        "audio.v2.low": 0.479876,
+        "audio.v2.mid": 0.031144,
+        "audio.v2.high": 0.055444,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.202923,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 150,
+      "time": 2.5,
+      "audio": {
+        "audio.v2.low": 0.4845,
+        "audio.v2.mid": 0.024061,
+        "audio.v2.high": 0.043232,
+        "audio.v2.onset": 1
+      },
+      "pose": {
+        "left_hand": [
+          0.202247,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 151,
+      "time": 2.5166666666666666,
+      "audio": {
+        "audio.v2.low": 0.488538,
+        "audio.v2.mid": 0.01784,
+        "audio.v2.high": 0.032311,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.201659,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 152,
+      "time": 2.533333333333333,
+      "audio": {
+        "audio.v2.low": 0.49198,
+        "audio.v2.mid": 0.012511,
+        "audio.v2.high": 0.022813,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.201159,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 153,
+      "time": 2.55,
+      "audio": {
+        "audio.v2.low": 0.494817,
+        "audio.v2.mid": 0.0081,
+        "audio.v2.high": 0.014852,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200748,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 154,
+      "time": 2.566666666666667,
+      "audio": {
+        "audio.v2.low": 0.497042,
+        "audio.v2.mid": 0.004629,
+        "audio.v2.high": 0.008525,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200426,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 155,
+      "time": 2.5833333333333335,
+      "audio": {
+        "audio.v2.low": 0.49865,
+        "audio.v2.mid": 0.002115,
+        "audio.v2.high": 0.003908,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200195,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 156,
+      "time": 2.6,
+      "audio": {
+        "audio.v2.low": 0.499636,
+        "audio.v2.mid": 0.000571,
+        "audio.v2.high": 0.001057,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200052,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 157,
+      "time": 2.6166666666666667,
+      "audio": {
+        "audio.v2.low": 0.499998,
+        "audio.v2.mid": 3e-06,
+        "audio.v2.high": 6e-06,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.2,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 158,
+      "time": 2.6333333333333333,
+      "audio": {
+        "audio.v2.low": 0.499735,
+        "audio.v2.mid": 0.000415,
+        "audio.v2.high": 0.000768,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200038,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 159,
+      "time": 2.65,
+      "audio": {
+        "audio.v2.low": 0.498848,
+        "audio.v2.mid": 0.001804,
+        "audio.v2.high": 0.003334,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200166,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 160,
+      "time": 2.6666666666666665,
+      "audio": {
+        "audio.v2.low": 0.49734,
+        "audio.v2.mid": 0.004164,
+        "audio.v2.high": 0.007673,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200384,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 161,
+      "time": 2.683333333333333,
+      "audio": {
+        "audio.v2.low": 0.495212,
+        "audio.v2.mid": 0.007484,
+        "audio.v2.high": 0.013733,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.200691,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 162,
+      "time": 2.7,
+      "audio": {
+        "audio.v2.low": 0.492472,
+        "audio.v2.mid": 0.011746,
+        "audio.v2.high": 0.021439,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.201087,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 163,
+      "time": 2.716666666666667,
+      "audio": {
+        "audio.v2.low": 0.489126,
+        "audio.v2.mid": 0.01693,
+        "audio.v2.high": 0.0307,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.201573,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 164,
+      "time": 2.7333333333333334,
+      "audio": {
+        "audio.v2.low": 0.485183,
+        "audio.v2.mid": 0.023011,
+        "audio.v2.high": 0.041403,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.202147,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 165,
+      "time": 2.75,
+      "audio": {
+        "audio.v2.low": 0.480651,
+        "audio.v2.mid": 0.029959,
+        "audio.v2.high": 0.053418,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.20281,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 166,
+      "time": 2.7666666666666666,
+      "audio": {
+        "audio.v2.low": 0.475543,
+        "audio.v2.mid": 0.03774,
+        "audio.v2.high": 0.066601,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.203559,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 167,
+      "time": 2.783333333333333,
+      "audio": {
+        "audio.v2.low": 0.469871,
+        "audio.v2.mid": 0.046316,
+        "audio.v2.high": 0.080792,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.204396,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 168,
+      "time": 2.8,
+      "audio": {
+        "audio.v2.low": 0.46365,
+        "audio.v2.mid": 0.055644,
+        "audio.v2.high": 0.09582,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.205319,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 169,
+      "time": 2.816666666666667,
+      "audio": {
+        "audio.v2.low": 0.456894,
+        "audio.v2.mid": 0.065679,
+        "audio.v2.high": 0.111502,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.206326,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 170,
+      "time": 2.8333333333333335,
+      "audio": {
+        "audio.v2.low": 0.449622,
+        "audio.v2.mid": 0.076373,
+        "audio.v2.high": 0.12765,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.207419,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 171,
+      "time": 2.85,
+      "audio": {
+        "audio.v2.low": 0.44185,
+        "audio.v2.mid": 0.087671,
+        "audio.v2.high": 0.144068,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.208594,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 172,
+      "time": 2.8666666666666667,
+      "audio": {
+        "audio.v2.low": 0.433599,
+        "audio.v2.mid": 0.09952,
+        "audio.v2.high": 0.160558,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.209852,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 173,
+      "time": 2.8833333333333333,
+      "audio": {
+        "audio.v2.low": 0.424889,
+        "audio.v2.mid": 0.111861,
+        "audio.v2.high": 0.17692,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.21119,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 174,
+      "time": 2.9,
+      "audio": {
+        "audio.v2.low": 0.415742,
+        "audio.v2.mid": 0.124634,
+        "audio.v2.high": 0.192957,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.212609,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 175,
+      "time": 2.9166666666666665,
+      "audio": {
+        "audio.v2.low": 0.406181,
+        "audio.v2.mid": 0.137776,
+        "audio.v2.high": 0.208474,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.214107,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 176,
+      "time": 2.933333333333333,
+      "audio": {
+        "audio.v2.low": 0.396229,
+        "audio.v2.mid": 0.151223,
+        "audio.v2.high": 0.223285,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.215681,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 177,
+      "time": 2.95,
+      "audio": {
+        "audio.v2.low": 0.385912,
+        "audio.v2.mid": 0.164908,
+        "audio.v2.high": 0.237209,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.217332,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 178,
+      "time": 2.966666666666667,
+      "audio": {
+        "audio.v2.low": 0.375255,
+        "audio.v2.mid": 0.178766,
+        "audio.v2.high": 0.25008,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.219057,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "frame": 179,
+      "time": 2.9833333333333334,
+      "audio": {
+        "audio.v2.low": 0.364285,
+        "audio.v2.mid": 0.192727,
+        "audio.v2.high": 0.261741,
+        "audio.v2.onset": 0
+      },
+      "pose": {
+        "left_hand": [
+          0.220855,
+          0.6,
+          0,
+          1
+        ],
+        "right_hand": [
+          0.7,
+          0.6,
+          0,
+          1
+        ]
+      }
+    }
+  ]
+}

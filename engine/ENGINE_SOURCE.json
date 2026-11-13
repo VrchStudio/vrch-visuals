@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "repository": "vrch-web-viewer-pages",
+  "commit": "c96c22827712797c14b1c38d509274208ffe284f",
+  "public_reference": {
+    "repository": "VrchStudio/vrch-apps",
+    "commit": "14fead02041b7a78eae744b49df92afe43d94310",
+    "directory": "apps/shader-editor/src/scripts"
+  },
+  "files": {
+    "three.min.js": {
+      "source": "static/scripts/three.min.js",
+      "sha256": "3b3a1c97de3ce65ec5b28c28d9f2805a738e9651622691ba771aa95c79d41d51"
+    },
+    "vrch_pages_scene_spec.js": {
+      "source": "static/scripts/vrch_pages_scene_spec.js",
+      "sha256": "824fd5409bcb6e048172cbcb8347fae25362f86f2e089e0144aa7c86a6977145"
+    },
+    "vrch_pages_scene_contract.js": {
+      "source": "static/scripts/vrch_pages_scene_contract.js",
+      "sha256": "87268df9a5ecb2d1d5566aa7e6156f3179ab5ab509b6814329a7419f8582e574"
+    },
+    "vrch_pages_scene_signal_bus.js": {
+      "source": "static/scripts/vrch_pages_scene_signal_bus.js",
+      "sha256": "ce1b9bdd706a66e9d2a35361b0a867af037b39e71065a973907ab0b9d72f6075"
+    },
+    "vrch_pages_scene_source_binding.js": {
+      "source": "static/scripts/vrch_pages_scene_source_binding.js",
+      "sha256": "d82ec64fbd79a397b1aae914ef511e886192ad7d8aab79c4acb4267bd3592eb8"
+    },
+    "vrch_pages_scene_runtime.js": {
+      "source": "static/scripts/vrch_pages_scene_runtime.js",
+      "sha256": "469c99e448f63ff24db48e742cbd9ce65203ff9fc3b5b31887ded72b32ded4ba"
+    }
+  }
+}
