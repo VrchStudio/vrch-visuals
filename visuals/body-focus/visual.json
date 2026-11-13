@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.body-focus",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:c0d7ae6162f9404f381847980ada7833f2eb98272b13124871b50695c19c1c5d",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.body-tracker.png"
+  ]
+}

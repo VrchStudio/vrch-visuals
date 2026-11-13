@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.body-tracker",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:62fbe1de2c8d5f8f1ddd26a0306c0bf0aedcd0dead4d0bafdc01941f95b6dcd4",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.body-tracker.webp",
+    "vrch.body-tracker.png"
+  ]
+}

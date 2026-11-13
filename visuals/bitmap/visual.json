@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.bitmap",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:d0274c4ebc3b56e3819fe565ee0df047efa138d928cba9b502989143d1d87c9e",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.bitmap.webp",
+    "vrch.bitmap.png"
+  ]
+}

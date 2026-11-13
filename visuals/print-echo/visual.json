@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-print-echo",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:1766b1b03af3435604d4c1676296b9eb22a429b80ec02d1984d82c672cf1a5f8",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-print-echo.webp"
+  ]
+}

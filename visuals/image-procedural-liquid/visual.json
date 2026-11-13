@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "vrch.image-procedural-liquid",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:a32f3da00a7250606100c728da5ac19bff7ce43f5be351a5c4b3dd45acbafd37",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": []
+}

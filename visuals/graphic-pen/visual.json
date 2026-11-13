@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.graphic-pen",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:e4fb6d052bed291945c368d4e0ba39c3da4f968eea2d0af89d603d326a95e3bc",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.graphic-pen.png"
+  ]
+}

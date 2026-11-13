@@ -2,7 +2,7 @@
 
 Official free visuals by VRCH: 57 editable definitions and their original thumbnails,
 with catalog presentation and audio choreography. The migration baseline is 1.0.0
-for every visual. No release has been published yet.
+for every visual. Each visual is an independently described resource; bundle publication is a delivery convenience.
 
 ## Check and export
 
@@ -33,8 +33,10 @@ complete 63-entry order.
 
 ## Repository layout
 
-- `presets/definitions/`: original SceneDefinition files; filenames are stable.
-- `visuals.json`: version, publisher, MIT license, free tier, JCS hash, provenance kind and thumbnail names, keyed by slug.
+- `visuals/<slug>/definition.json`: original SceneDefinition bytes.
+- `visuals/<slug>/visual.json`: that resource's identity, version, publisher, tier, license, hash, provenance kind and thumbnail names.
+- `visuals/<slug>/CHANGELOG.md`: that resource's version history.
+- `visuals/<slug>/resource.json` in release bundles: generated complete resource descriptor, including every required file and digest.
 - `thumbnails/`: only images referenced by these definitions or the selection catalog.
 - `catalog/`: selection, audio choreography and complete order keyed by scene ID.
 - `schemas/`: metadata schema and draft resource descriptor schema.
@@ -52,6 +54,41 @@ accepted yet. Publisher, free tier, and execution trust are separate: the 22
 `user.vp-*` definitions retain their original untrusted provenance. They do not gain
 execution privileges because this is an official repository.
 
-Future work: deterministic release packaging, immutable release/index handling,
-SwiftShader compilation and same-engine visual comparisons, and Pages lock/sync
-integration. No premium tier, entitlement or credit system is implemented here.
+## Verify and publish
+
+```sh
+npm ci
+npx playwright install chromium
+node tests/render_compare.cjs
+python3 tools/visuals.py build --version 1.0.0
+python3 tools/visuals.py extract pulse-ridges --archive dist/1.0.0/vrch-visuals-1.0.0.zip --output-dir /tmp/pulse-ridges
+# After committing and pushing verified source, explicitly authorized publication:
+python3 tools/visuals.py release --version 1.0.0
+```
+
+The renderer pins Playwright/Chromium, uses SwiftShader at the fixture recipe's
+resolution, executes main/frame/coarse, warms 120 frames and compares fixed samples
+under identical clock, seeded randomness, image, audio and synthetic tracking input.
+First publication compares all 57 works against the pinned migration source. Later
+runs compile every current work and compare hash-changed definitions with the latest
+published source in the same engine. Known-change and bad-shader controls exercise the
+checker. Portability lint detects the documented floating-point bit decoding and
+explicit negative/unguarded trigonometric pow-base patterns; it is not a GLSL range prover.
+Device performance remains a separate check.
+
+ZIP entries use sorted paths, a fixed timestamp, no compression and mode 0644.
+Per-resource descriptors retain their first publication commit. The index keeps all
+bundle and resource versions. Same-version content changes are rejected; unchanged
+resources reuse their descriptors. Each extracted visual includes its definition,
+metadata, changelog, referenced thumbnails, resource descriptor and license, with
+bundle-relative paths preserved. It requires neither the global catalog nor another
+visual. Source definitions retain their original logical Pages thumbnail references;
+resource consumers resolve actual files through resource.json.
+
+The serialized Release workflow validates first, verifies draft assets, publishes,
+checks anonymous downloads, and only then updates index/stable.json on latest main.
+Retrying identical content is safe; published missing or different assets are refused,
+and an older retry cannot replace a newer latest entry. Engine/tools/tests/index do not
+enter the content bundle. Pages installation is a separate lock/sync operation.
+
+No premium tier, entitlement or credit system is implemented here.

@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.halftone-circle",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:04e0cf08b6d1a688ca44e093ab289f9fb65ad33fa1d1533a98b7be96c0820b15",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.halftone-circle.png"
+  ]
+}

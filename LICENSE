@@ -2,7 +2,7 @@ MIT License
 
 Copyright (c) 2026 VRCH
 
-Scope: This grant applies to presets/, visuals.json, thumbnails/, catalog/,
+Scope: This grant applies to visuals/, thumbnails/, catalog/,
 schemas/, tools/, fixtures/, tests/, .github/, and the repository's original
 README.md, AGENTS.md and CHANGELOG.md.
 

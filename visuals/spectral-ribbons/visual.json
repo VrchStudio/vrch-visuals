@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-spectral-ribbons",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:d6c6f1aaca10d6ddc4d91ea0d87d6ac7d1a22df30354ef5221cb1e0b7996a4e8",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-spectral-ribbons.webp"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.procedural-reveal",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:ecaa6938f4a2d0cf59e2ecc5ced70ebcbc358210e61d58a415168e2e9d9d584b",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.procedural-reveal.webp",
+    "vrch.image-procedural-composite.png"
+  ]
+}

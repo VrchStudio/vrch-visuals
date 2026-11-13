@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.single-row-stretch",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:e6906988fcabe99fc44978be9fe873c01f693cbc71c3310d44d354bb0769267f",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.single-row-stretch.webp",
+    "vrch.single-row-stretch.png"
+  ]
+}

@@ -49,10 +49,22 @@ def local_file(root, relative):
     return target
 
 
+def metadata(root=ROOT):
+    result = {}
+    for folder in sorted((root / 'visuals').iterdir()):
+        require(folder.is_dir() and not folder.is_symlink(), 'Unexpected visual entry: ' + folder.name)
+        require(set(p.name for p in folder.iterdir()) == {'definition.json', 'visual.json', 'CHANGELOG.md'}, 'Incomplete or unexpected resource files: ' + folder.name)
+        item = read(local_file(root, f'visuals/{folder.name}/visual.json'))
+        Draft202012Validator(read(root / 'schemas/visual-meta.v0.schema.json')).validate(item)
+        result[folder.name] = item
+    require(bool(result), 'No visual resources found')
+    return result
+
+
 def owned_files(root=ROOT):
-    """The only public-library files exported; Pages' six fixtures and unused images stay untouched."""
-    files = {f'presets/definitions/{p.name}': f'{PAGES_PRESETS}/definitions/{p.name}'
-             for p in sorted((root / 'presets/definitions').glob('*.definition.json'))}
+    """Adapter from independent resources to the unchanged Pages source layout."""
+    files = {f'visuals/{slug}/definition.json': f'{PAGES_PRESETS}/definitions/{slug}.definition.json'
+             for slug in metadata(root)}
     files.update({f'catalog/{name}': f'{PAGES_PRESETS}/{name}'
                   for name in ('selection.json', 'audio-mapping-v2.json', 'order.json')})
     files.update({f'thumbnails/{p.name}': f'static/scenes/v1/thumbnails/{p.name}'
@@ -66,15 +78,11 @@ def check(root=ROOT):
     require({p.name for p in (root / 'engine').iterdir()} == ENGINE_FILES | {'ENGINE_SOURCE.json'}, 'Unexpected engine files')
     for name, item in engine['files'].items():
         require(sha(local_file(root, 'engine/' + name)) == item['sha256'], 'Engine digest mismatch: ' + name)
-    metadata = read(root / 'visuals.json')
-    Draft202012Validator(read(root / 'schemas/visuals.schema.json')).validate(metadata)
+    lint = subprocess.run(['node', str(root / 'tools/shader_lint.cjs')], text=True, capture_output=True)
+    require(lint.returncode == 0, lint.stderr.strip())
+    records = metadata(root)
     baseline = read(root / 'tests/migration-baseline.json')
-    definitions = {}
-    for p in sorted((root / 'presets/definitions').iterdir()):
-        require(p.name.endswith('.definition.json'), 'Unexpected definition file: ' + p.name)
-        local_file(root, 'presets/definitions/' + p.name)
-        definitions[p.name.removesuffix('.definition.json')] = read(p)
-    require(set(definitions) == set(metadata['visuals']), 'Definition/metadata set differs')
+    definitions = {slug: read(local_file(root, f'visuals/{slug}/definition.json')) for slug in records}
     result = subprocess.run(['node', str(root / 'tools/check_engine.cjs')], input=json.dumps(list(definitions.values())), text=True, capture_output=True)
     require(result.returncode == 0, result.stderr.strip())
     engine_result = json.loads(result.stdout)
@@ -109,7 +117,7 @@ def check(root=ROOT):
     by_id = {d['scene_id']: d for d in definitions.values()}
     for slug, definition in definitions.items():
         validator.validate(definition)
-        meta = metadata['visuals'][slug]
+        meta = records[slug]
         sid = definition['scene_id']
         require(meta['id'] == sid, slug + ': metadata ID differs')
         require(meta['content_hash'] == checked[sid]['content_hash'], slug + ': JCS hash differs')
@@ -143,8 +151,8 @@ def check(root=ROOT):
     descriptor_schema = read(root / 'schemas/resource-descriptor.v0.schema.json')
     Draft202012Validator.check_schema(descriptor_schema)
     for slug, definition in definitions.items():
-        meta = metadata['visuals'][slug]
-        files = [('definition', f'presets/definitions/{slug}.definition.json')] + [('thumbnail', 'thumbnails/' + name) for name in meta['thumbnails']]
+        meta = records[slug]
+        files = [('definition', f'visuals/{slug}/definition.json')] + [('thumbnail', 'thumbnails/' + name) for name in meta['thumbnails']]
         descriptor = {'schema_version': 0, 'kind': 'visual', 'id': meta['id'], 'publisher': meta['publisher'], 'name': definition['title'], 'version': meta['version'], 'tier': meta['tier'], 'license': meta['license'], 'digest': {'algorithm': 'jcs-sha256', 'value': meta['content_hash'].removeprefix('sha256:')}, 'requires': checked[meta['id']]['requires'], 'files': [{'role': role, 'path': name, 'sha256': sha(root / name), 'size': (root / name).stat().st_size} for role, name in files], 'provenance': {'repository': 'VrchStudio/vrch-visuals', 'derived_from': []}, 'signatures': []}
         Draft202012Validator(descriptor_schema).validate(descriptor)
     return {'definitions': len(definitions), 'thumbnails': len(expected_thumbnails), 'order': len(order), 'selected': len(selected), 'choreography': len(audio_ids), 'export_files': len(owned_files(root))}
@@ -181,9 +189,27 @@ def main():
     commands.add_parser('check')
     command = commands.add_parser('export')
     command.add_argument('--output-dir', required=True, type=Path, help='Pages root or empty staging directory')
+    for name in ('build', 'release', 'publish'):
+        sub = commands.add_parser(name)
+        sub.add_argument('--version', required=True)
+    sub = commands.add_parser('extract')
+    sub.add_argument('slug')
+    sub.add_argument('--archive', required=True, type=Path)
+    sub.add_argument('--output-dir', required=True, type=Path)
     args = parser.parse_args()
     try:
-        result = check() if args.command == 'check' else export(args.output_dir)
+        if args.command == 'extract':
+            import releases
+            result = releases.extract(args.archive, args.slug, args.output_dir)
+        elif args.command in ('build', 'release', 'publish'):
+            import releases
+            if args.command == 'build':
+                package, release, record = releases.build(args.version)
+                result = {'archive': str(package), 'sha256': record['archive']['sha256']}
+            else:
+                result = releases.dispatch(args.version) if args.command == 'release' else releases.publish(args.version)
+        else:
+            result = check() if args.command == 'check' else export(args.output_dir)
     except (ValueError, KeyError, OSError) as error:
         parser.exit(1, f'{error}\n')
     print(json.dumps(dict(ok=True, **result), indent=2))

@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.hologram",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:91a030fc7afb65452689737c93dd7c1d8bd7fd0b5772026231f6a9d3b6a63b7c",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.hologram.webp",
+    "vrch.hologram.png"
+  ]
+}

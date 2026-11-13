@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-solar-flare",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:188e8146a9598d91b0e25f8a128f4a0b032fe839d96666bc1390ec0d6f65c13c",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-solar-flare.webp"
+  ]
+}

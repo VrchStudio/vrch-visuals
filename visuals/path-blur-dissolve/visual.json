@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.path-blur-dissolve",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:557556ae643c5f25d753526dd18e3eb971c955dcc8de73fd2e6cfebb00566f32",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.path-blur-dissolve.png"
+  ]
+}

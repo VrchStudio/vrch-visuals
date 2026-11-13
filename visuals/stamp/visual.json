@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.stamp",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:a468360d6d1b1e3100530c8ac4831baea3a2fd40ac76d91b29aff7f6378694ea",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.stamp.png"
+  ]
+}

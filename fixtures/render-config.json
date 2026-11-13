@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "migration_ref": "a58683c488b6249d399b1291e9d0cf3210b9cec2",
+  "width": 96,
+  "height": 54,
+  "warmup_frames": 120,
+  "sample_frames": [120, 150, 179],
+  "quality": "standard",
+  "playwright": "1.59.1"
+}

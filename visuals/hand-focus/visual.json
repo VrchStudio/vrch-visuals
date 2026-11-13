@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.hand-focus",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:8692ee54df314a85f33015de21b11a4a2f9efe9df2de46328af08f4ef367851f",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.hand-tracker.png"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "vrch.volumetric-pyramid",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:75613a48d59b2b67d0960cee9508172a5e0e1e3e7e7600414c01a219424040f6",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": []
+}

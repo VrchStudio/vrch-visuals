@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-warp-drive",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:999502936ef1bfc38b7f0c8b5073739204bbb0e1ea513f2db43a8979098de039",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-warp-drive.webp"
+  ]
+}

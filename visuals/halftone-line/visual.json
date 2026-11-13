@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.halftone-line",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:01c76360267cac1de04e5d8a97c69d9877982bd3f9608b0beefa2d73ba006182",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.halftone-line.png"
+  ]
+}

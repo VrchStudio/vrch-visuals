@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-rain-glass",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:e9c94e4fcb389058d3e3c417a81ec0b6acdb62a1eba8591f81e2ae09d2269db2",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-rain-glass.webp"
+  ]
+}

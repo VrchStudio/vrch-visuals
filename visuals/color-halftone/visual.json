@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.color-halftone",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:27ae953ad0827e3a93954480daa5c7c4b7a272a135f803770c9f36c311d519ef",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.color-halftone.webp",
+    "vrch.color-halftone.png"
+  ]
+}

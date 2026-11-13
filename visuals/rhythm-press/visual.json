@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-rhythm-press",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:030ce4f327bdaf0e8ea4d7d9fdc38ff7c3aaaa5ef2fadb0e4ea57fd81adeb6f6",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-rhythm-press.webp"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.procedural-field",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:828f723e07c32f7ade7e499d51b137f43ec8fcb660dede415033c7b63e08f08e",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.procedural-field.webp",
+    "vrch.procedural-field.png"
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"vrch-visuals-checks","private":true,"scripts":{"render":"node tests/render_compare.cjs"},"devDependencies":{"playwright":"1.59.1"}}

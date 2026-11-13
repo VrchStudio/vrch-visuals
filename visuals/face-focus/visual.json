@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.face-focus",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:0d371e27a54e86076efea3ea5743dd540659039ca1f5d8a1829cddc42ee7f3f2",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.face-focus.webp",
+    "vrch.face-tracker.png"
+  ]
+}

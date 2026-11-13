@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-pulse-ridges",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:dbb2dd2fb6b262fafe34e4f8c3624b65702606b58bff064357dc2a0c200c7501",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-pulse-ridges.webp"
+  ]
+}

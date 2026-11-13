@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.face-tracker",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:0fea650a3dcaf6f1d9c14d6ffc44604c888693fb9f20e2cbf6898a5dcdbb595e",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.face-tracker.webp",
+    "vrch.face-tracker.png"
+  ]
+}

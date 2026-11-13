@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-laser-fan",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:7ebe3be6b791a329c98445e6e8356c56b00d70603f7779fdd3edb77ecab91715",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-laser-fan.webp"
+  ]
+}

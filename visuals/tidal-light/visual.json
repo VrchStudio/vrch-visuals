@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-tidal-light",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:e18f29aae2bc2e96ac20f98061cd4f954f7cdd958f1281fd0eaf0316c046c451",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-tidal-light.webp"
+  ]
+}

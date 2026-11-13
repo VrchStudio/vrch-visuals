@@ -15,7 +15,7 @@ class VisualsTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.root = Path(self.tmp.name) / 'library'
-        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '.venv', '__pycache__'))
+        shutil.copytree(ROOT, self.root, ignore=shutil.ignore_patterns('.git', '.venv', '__pycache__', 'node_modules', 'dist', '.test-output'))
 
     def tearDown(self):
         self.tmp.cleanup()
@@ -29,17 +29,17 @@ class VisualsTests(unittest.TestCase):
     def test_baseline(self):
         self.assertEqual(visuals.check(self.root), {'definitions':57,'thumbnails':57,'order':63,'selected':35,'choreography':20,'export_files':117})
         baseline = visuals.read(self.root / 'tests/migration-baseline.json')['visuals']
-        for path in (self.root / 'presets/definitions').glob('*.json'):
+        for path in (self.root / 'visuals').glob('*/definition.json'):
             sid = visuals.read(path)['scene_id']
             self.assertEqual(visuals.sha(path), baseline[sid]['sha256'])
 
     def test_hash_change_rejected(self):
-        self.change('presets/definitions/bitmap.definition.json', lambda d: d.update(title='Changed'))
+        self.change('visuals/bitmap/definition.json', lambda d: d.update(title='Changed'))
         with self.assertRaisesRegex(ValueError, 'JCS hash'):
             visuals.check(self.root)
 
     def test_disabled_and_unknown_signal_rejected(self):
-        path = self.root / 'presets/definitions/bitmap.definition.json'
+        path = self.root / 'visuals/bitmap/definition.json'
         original = path.read_text()
         for signal in ['audio.spectrum', 'audio.not-real']:
             path.write_text(original)
@@ -48,7 +48,7 @@ class VisualsTests(unittest.TestCase):
                 visuals.check(self.root)
 
     def test_invalid_analysis_rejected(self):
-        self.change('presets/definitions/bitmap.definition.json', lambda d: d.update(analysis_requirements=[{'kind':'unknown','source_input':0,'topology':'vrch.pose-landmarks@1','history_ms':0}]))
+        self.change('visuals/bitmap/definition.json', lambda d: d.update(analysis_requirements=[{'kind':'unknown','source_input':0,'topology':'vrch.pose-landmarks@1','history_ms':0}]))
         with self.assertRaises(ValueError):
             visuals.check(self.root)
 
@@ -72,21 +72,21 @@ class VisualsTests(unittest.TestCase):
 
     def test_provenance_pin_survives_matching_metadata_edit(self):
         # ai-derived -> human-edit is namespace-valid, but migration trust provenance is pinned.
-        self.change('presets/definitions/pulse-ridges.definition.json', lambda d:d['provenance'].update(kind='human-edit'))
-        p = self.root / 'presets/definitions/pulse-ridges.definition.json'
+        self.change('visuals/pulse-ridges/definition.json', lambda d:d['provenance'].update(kind='human-edit'))
+        p = self.root / 'visuals/pulse-ridges/definition.json'
         import subprocess
         out = subprocess.check_output(['node', str(self.root / 'tools/check_engine.cjs')], input=json.dumps([json.loads(p.read_text())]), text=True)
         digest = json.loads(out)['results'][0]['content_hash']
-        self.change('visuals.json', lambda d:d['visuals']['pulse-ridges'].update(provenance={'kind':'human-edit'},content_hash=digest))
+        self.change('visuals/pulse-ridges/visual.json', lambda d:d.update(provenance={'kind':'human-edit'},content_hash=digest))
         with self.assertRaisesRegex(ValueError, 'pinned provenance'):
             visuals.check(self.root)
 
     def test_metadata_and_thumbnail_validation(self):
-        self.change('visuals.json', lambda d:d['visuals']['bitmap'].update(license='unknown'))
+        self.change('visuals/bitmap/visual.json', lambda d:d.update(license='unknown'))
         from jsonschema import ValidationError
         with self.assertRaises(ValidationError):
             visuals.check(self.root)
-        shutil.copyfile(ROOT / 'visuals.json', self.root / 'visuals.json')
+        shutil.copyfile(ROOT / 'visuals/bitmap/visual.json', self.root / 'visuals/bitmap/visual.json')
         (self.root / 'thumbnails/extra.png').write_bytes(b'extra')
         with self.assertRaisesRegex(ValueError, 'Unreferenced'):
             visuals.check(self.root)
@@ -113,7 +113,7 @@ class VisualsTests(unittest.TestCase):
                 self.assertEqual((destination/target).stat().st_mode & 0o777, 0o644)
             self.assertEqual(fixture.read_bytes(), b'Pages-owned')
         before = {p.relative_to(destination):p.read_bytes() for p in destination.rglob('*') if p.is_file()}
-        self.change('presets/definitions/bitmap.definition.json', lambda d:d.update(title='Bad hash'))
+        self.change('visuals/bitmap/definition.json', lambda d:d.update(title='Bad hash'))
         with self.assertRaises(ValueError):
             visuals.export(destination, self.root)
         self.assertEqual(before, {p.relative_to(destination):p.read_bytes() for p in destination.rglob('*') if p.is_file()})

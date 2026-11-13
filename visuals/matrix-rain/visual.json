@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-matrix-rain",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:6406c51cebc1121abb1425bedf3b7a56c5b8a1f0ca38f2b38f488b043e0e0491",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": []
+}

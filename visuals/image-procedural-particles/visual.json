@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "vrch.image-procedural-particles",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:4cf0971548d5f4426a9d0443eb2106410d78aae1de44542575c83814b4d024e0",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": []
+}

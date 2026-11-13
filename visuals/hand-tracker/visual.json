@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.hand-tracker",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:8b14edb18bd88f4a182351e661c5f79f265ff27f963e9d83221fbf03c5297b17",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.hand-tracker.webp",
+    "vrch.hand-tracker.png"
+  ]
+}

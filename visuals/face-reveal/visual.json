@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.face-reveal",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:3f0efae76796911ad203f68ed85ef60f35481084e02e880382131aa2352ff43a",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.face-tracker.png"
+  ]
+}

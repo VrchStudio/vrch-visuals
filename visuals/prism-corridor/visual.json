@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-prism-corridor",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:4855a2889ad4a83b11509561e169f882f97908355d995870701dc14142c3f434",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": []
+}

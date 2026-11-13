@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-particle-orbit",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:dcb64f1cf683c5d17b23431c8e7b00f0bef61d1d75d16fd7f92f9b5df08bf428",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": []
+}

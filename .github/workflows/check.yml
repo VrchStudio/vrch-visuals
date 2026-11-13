@@ -7,6 +7,8 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -16,11 +18,8 @@ jobs:
       - run: pip install -r tools/requirements.txt
       - run: python3 tools/visuals.py check
       - run: python3 -m unittest discover -s tests -v
-  # Future render comparison: pin Chrome, use SwiftShader and fixtures/,
-  # warm 120 frames, compare changed definitions in the SAME engine invocation.
-  # It remains explicitly skipped until implemented; check success is not GPU acceptance.
-  render-comparison:
-    if: ${{ false }}
-    runs-on: ubuntu-24.04
-    steps:
-      - run: echo 'SwiftShader comparison is not implemented in phase 1.'
+      - run: node tests/shader_lint_test.cjs
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/render_compare.cjs
+        timeout-minutes: 20

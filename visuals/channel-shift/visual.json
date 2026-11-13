@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.channel-shift",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:4602e9b209a38185c181c0b0f92ba0ce64920de205d3b64cb8678513251df29b",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.channel-shift.png"
+  ]
+}

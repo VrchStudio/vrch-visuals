@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-gesture-weave",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:0f7ce36c24639e148474974934a4392b404eec9c5a444b0476a2f1e5f86dced9",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-gesture-weave.webp"
+  ]
+}

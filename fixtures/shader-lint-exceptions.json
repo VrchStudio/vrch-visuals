@@ -1,0 +1,8 @@
+{
+  "spectral-ribbons/fragment": {
+    "sha256": "399878217148722282fb345078667df8457484f75021775127848404008f7f0c",
+    "rule": "pow-negative-base",
+    "expression": "pow(sin(PI*w01),.7)",
+    "reason": "Migration baseline: uc is clamped to [0,1], crest to [.22,.78], and w01 maps uc to [0,1]. Preserve accepted shader bytes. Floating-point endpoint rounding on device GPUs remains a follow-up; any edit invalidates this exemption."
+  }
+}

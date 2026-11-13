@@ -1,0 +1,16 @@
+{
+  "schema_version": 0,
+  "id": "vrch.hand-window",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:9f0cbcf3dbc8be89ac55d63a6387c96d013bea37240f217e6c82ffd82f0f04cd",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "selector-vrch.hand-window.webp",
+    "vrch.hand-tracker.png"
+  ]
+}

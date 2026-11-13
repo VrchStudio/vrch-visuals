@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "vrch.hand-reveal",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:0c6e403a87d93c6b9b2fc3ffba243730275d5f862a65ad4163c78b86562fdbf3",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": [
+    "vrch.hand-tracker.png"
+  ]
+}

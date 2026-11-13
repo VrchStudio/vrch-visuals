@@ -1,0 +1,15 @@
+{
+  "schema_version": 0,
+  "id": "user.vp-gallery-shutter",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:fd56429fa13a4252c3e0ecaad8738e08112365205aa2ce1ecb33815d012537be",
+  "provenance": {
+    "kind": "ai-derived"
+  },
+  "thumbnails": [
+    "selector-user.vp-gallery-shutter.webp"
+  ]
+}

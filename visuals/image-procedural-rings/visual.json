@@ -1,0 +1,13 @@
+{
+  "schema_version": 0,
+  "id": "vrch.image-procedural-rings",
+  "publisher": "vrch",
+  "version": "1.0.0",
+  "tier": "free",
+  "license": "MIT",
+  "content_hash": "sha256:cdcffd961138f575000126f1a370e1183581937e7fd855ad676ad5f1ac6f3905",
+  "provenance": {
+    "kind": "builtin"
+  },
+  "thumbnails": []
+}
