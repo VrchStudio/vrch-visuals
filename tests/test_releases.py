@@ -36,6 +36,29 @@ class ReleaseTests(unittest.TestCase):
                 self.assertEqual((info.external_attr>>16)&0o777,0o644)
         self.assertEqual(len(release['resources']),57)
 
+    def test_parameter_compatibility_version_policy(self):
+        before={'parameters':[{'key':'speed','type':'float','default':1}]}
+        after=copy.deepcopy(before);after['parameters'][0]['default']=2
+        self.assertEqual(r.required_bump(before,after),1)
+        after['parameters'][0]['key']='new_speed'
+        self.assertEqual(r.required_bump(before,after),0)
+        self.assertEqual(r.required_bump(before,before),2)
+
+    def test_engine_sync_uses_committed_whitelist(self):
+        import shutil
+        pages=self.output/'engine-source';scripts=pages/'static/scripts';scripts.mkdir(parents=True)
+        destination=self.output/'engine-target';shutil.copytree(v.ROOT/'engine',destination/'engine')
+        for name in v.ENGINE_FILES:shutil.copyfile(v.ROOT/'engine'/name,scripts/name)
+        r.command('git','init','-q',cwd=pages)
+        r.command('git','add','static',cwd=pages)
+        r.command('git','-c','user.name=Test','-c','user.email=test@example.invalid','commit','-qm','fixture',cwd=pages)
+        (scripts/'vrch_pages_scene_contract.js').write_text('uncommitted text')
+        (scripts/'private.py').write_text('not a public engine file')
+        result=r.engine_sync(pages,'HEAD',True,destination)
+        self.assertEqual(result['changed_files'],[])
+        self.assertEqual((destination/'engine/vrch_pages_scene_contract.js').read_bytes(),(v.ROOT/'engine/vrch_pages_scene_contract.js').read_bytes())
+        self.assertFalse((destination/'engine/private.py').exists())
+
     def test_single_resource_is_complete(self):
         destination=self.output/'one'
         result=r.extract(self.package,'pulse-ridges',destination)

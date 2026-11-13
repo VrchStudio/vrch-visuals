@@ -59,6 +59,13 @@ def bundle_files(root):
     return files
 
 
+def required_bump(before, after):
+    old={p['key']:p for p in before['parameters']};new={p['key']:p for p in after['parameters']}
+    if set(old)!=set(new) or any(old[k]['type']!=new[k]['type'] for k in old):return 0
+    if any(old[k]['default']!=new[k]['default'] for k in old):return 1
+    return 2
+
+
 def descriptors(root, index, commit):
     meta=v.metadata(root)
     definitions={slug:v.read(root/f'visuals/{slug}/definition.json') for slug in meta}
@@ -76,7 +83,13 @@ def descriptors(root, index, commit):
             resources.append(old)
             continue
         if history:
-            v.require(version_key(m['version'])>max(map(version_key,history)), slug+': visual version must advance')
+            previous_version=max(history,key=version_key)
+            v.require(version_key(m['version'])>version_key(previous_version), slug+': visual version must advance')
+            previous=history[previous_version]
+            previous_path=next(f['path'] for f in previous['files'] if f['role']=='definition')
+            before=json.loads(command('git','show',previous['provenance']['commit']+':'+previous_path,cwd=root))
+            level=required_bump(before,d)
+            v.require(version_key(m['version'])[:level+1]>version_key(previous_version)[:level+1], slug+': parameter compatibility requires '+('major' if level==0 else 'minor' if level==1 else 'patch'))
         v.require(f"## [{m['version']}]" in (root/f'visuals/{slug}/CHANGELOG.md').read_text(), slug+': missing per-visual changelog entry')
         base=d['provenance'].get('base_scene_ref')
         derived=[{'key':'visual:'+base['scene_id'],'digest':{'algorithm':'jcs-sha256','value':base['content_hash'].removeprefix('sha256:')}}] if base else []
@@ -214,3 +227,16 @@ def extract(package, slug, destination):
             if source.is_file():
                 target=destination/source.relative_to(temp);target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target);target.chmod(0o644)
     return {'id':descriptor['id'],'version':descriptor['version'],'files':len(paths)+2,'destination':str(destination)}
+
+
+def engine_sync(pages_root, ref, write=False, root=v.ROOT):
+    commit=command('git','rev-parse',ref+'^{commit}',cwd=pages_root)
+    files={name:subprocess.check_output(['git','show',commit+':static/scripts/'+name],cwd=pages_root) for name in sorted(v.ENGINE_FILES)}
+    source=v.read(root/'engine/ENGINE_SOURCE.json')
+    source['commit']=commit
+    source['files']={name:{'source':'static/scripts/'+name,'sha256':hashlib.sha256(data).hexdigest()} for name,data in files.items()}
+    changed=[name for name,data in files.items() if (root/'engine'/name).read_bytes()!=data]
+    if write:
+        for name,data in files.items():(root/'engine'/name).write_bytes(data)
+        save(root/'engine/ENGINE_SOURCE.json',source)
+    return {'pages_commit':commit,'changed_files':changed,'written':write}

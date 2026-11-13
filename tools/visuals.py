@@ -196,9 +196,16 @@ def main():
     sub.add_argument('slug')
     sub.add_argument('--archive', required=True, type=Path)
     sub.add_argument('--output-dir', required=True, type=Path)
+    sub = commands.add_parser('engine-sync')
+    sub.add_argument('--pages-root', required=True, type=Path)
+    sub.add_argument('--ref', required=True)
+    sub.add_argument('--write', action='store_true')
     args = parser.parse_args()
     try:
-        if args.command == 'extract':
+        if args.command == 'engine-sync':
+            import releases
+            result = releases.engine_sync(args.pages_root, args.ref, args.write)
+        elif args.command == 'extract':
             import releases
             result = releases.extract(args.archive, args.slug, args.output_dir)
         elif args.command in ('build', 'release', 'publish'):

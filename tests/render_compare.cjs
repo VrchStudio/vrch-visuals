@@ -47,12 +47,14 @@ async function run(){
        else{const width=s.id.includes('face')?512:s.id.includes('hand-')?32:64,height=s.id.includes('hand-')?2:1,data=new Float32Array(width*height*4);for(let i=0;i<width*height;i++){data.set([.5+.2*Math.sin(i*.7+frame.time),.5+.2*Math.cos(i*.9),0,1],i*4);}if(s.id.includes('pose')){data.set(frame.pose.left_hand,15*4);data.set(frame.pose.right_hand,16*4);}effect.setSignalTexture(s.id,{data,width,height});}
       }
       const low=frame.audio['audio.v2.low'],mid=frame.audio['audio.v2.mid'],high=frame.audio['audio.v2.high'];
-      effect.prepareFrame(frame.time,{low,mid,high,rms:(low+mid+high)/3,v2_raw_low:low,v2_raw_mid:mid,v2_raw_high:high,v2_raw_energy:(low+mid+high)/3,frequencyData:new Uint8Array(512).fill(Math.round(128*low)),sampleRate:48000});
+      effect.prepareFrame(frame.time,{low,mid,high,rms:(low+mid+high)/3,v2_raw_low:low,v2_raw_mid:mid,v2_raw_high:high,v2_raw_energy:Math.min(1,(low+mid+high)/3+frame.audio['audio.v2.onset']*.4),v2_flux:frame.audio['audio.v2.onset']*.8,v2_brightness:high,v2_spectrum:Float32Array.from({length:64},(_,band)=>-58+18*Math.sin(band*.2+frame.time*2)+12*low),frequencyData:new Uint8Array(512).fill(Math.round(128*low)),sampleRate:48000});
       renderer.render(scene,camera);
       if(recipe.sample_frames.includes(frame.frame)){const bytes=new Uint8Array(recipe.width*recipe.height*4);gl.readPixels(0,0,recipe.width,recipe.height,gl.RGBA,gl.UNSIGNED_BYTE,bytes);captures.push(Array.from(bytes));}
       const error=gl.getError();if(error!==gl.NO_ERROR)throw Error('WebGL error '+error);
      }
-     return {gpu,captures,stages:['main',...(definition.frame?['frame']:[]),...(definition.coarse?['coarse']:[])]};
+     const activeTextures={};for(let i=0;i<effect.signalTextureInputs.length;i++){const input=effect.signalTextureInputs[i];const data=input?.data||input?.image?.data;if(data)activeTextures[i]=data.some(v=>v!==0);}
+     if(definition.signals.some(s=>s.id==='audio.v2.spectrum')&&!Object.values(activeTextures).some(Boolean))throw Error('Synthetic spectrum did not populate its texture');
+     return {gpu,captures,activeTextures,stages:['main',...(definition.frame?['frame']:[]),...(definition.coarse?['coarse']:[])]};
     }finally{effect?.dispose();renderer.dispose();renderer.forceContextLoss();Math.random=random;}
    };
   },config);
@@ -71,7 +73,7 @@ async function run(){
     diff=rendered.captures.reduce((sum,frame,i)=>sum+frame.filter((v,j)=>v!==before.captures[i][j]).length,0);
     if(diff){const a=old.version.split('.').map(Number),b=meta.version.split('.').map(Number);assert(b[0]>a[0]||(b[0]===a[0]&&b[1]>a[1]),slug+': changed picture requires at least a minor version');}
    }
-   report.rows.push({slug,stages:rendered.stages,different_bytes:diff,sample_sha256:rendered.captures.map(b=>crypto.createHash('sha256').update(Buffer.from(b)).digest('hex')),elapsed_ms:Date.now()-start});
+   report.rows.push({slug,active_textures:rendered.activeTextures,stages:rendered.stages,different_bytes:diff,sample_sha256:rendered.captures.map(b=>crypto.createHash('sha256').update(Buffer.from(b)).digest('hex')),elapsed_ms:Date.now()-start});
    console.log('PASS',slug,diff===null?'compiled':'compared '+diff+' bytes',Date.now()-start+'ms');
   }
   assert.deepEqual(errors,[]);report.gpu=first.gpu;

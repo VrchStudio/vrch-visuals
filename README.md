@@ -44,7 +44,7 @@ complete 63-entry order.
 - `fixtures/`: mathematically generated audio/pose inputs and a generated test image; no private test media.
 - `tests/`: positive/negative contract checks and the migration identity baseline.
 
-The engine whitelist is six JS files. Its source is maintained in Pages. The spec
+The engine whitelist is six JS files. `python3 tools/visuals.py engine-sync --pages-root <Pages-checkout> --ref <commit>` reports byte differences; add `--write` for an explicitly intended one-way refresh and commit it separately from artwork changes. Its source is maintained in Pages. The spec
 is the existing public JS bundle, not a copied spec JSON tree; no Pages Python
 validator or private documentation is included. Third-party notices in the copied
 files remain in force. See [LICENSE](LICENSE) for the MIT scope and engine exclusion.
