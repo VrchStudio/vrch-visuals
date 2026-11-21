@@ -100,7 +100,8 @@ class ReleaseTests(unittest.TestCase):
         # The guard hashes all resource bytes and metadata, not only the definition hash.
         index=copy.deepcopy(self.index)
         identifier=next(iter(index['visuals']))
-        index['visuals'][identifier]['versions']['1.0.0']['fingerprint']='0'*64
+        version=next(iter(index['visuals'][identifier]['versions']))
+        index['visuals'][identifier]['versions'][version]['fingerprint']='0'*64
         with self.assertRaisesRegex(ValueError,'without a version bump'):
             r.descriptors(v.ROOT,index,'b'*40)
 
