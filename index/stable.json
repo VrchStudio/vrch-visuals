@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest": "1.0.0",
+  "latest": "1.0.1",
   "versions": {
     "1.0.0": {
       "tag": "vrch-visuals-v1.0.0",
@@ -15,11 +15,25 @@
         "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.0.0/release.json",
         "sha256": "17f28b39aa53aae4a77ad6085210711a473fc1b820781ac9472b35f672b4d337"
       }
+    },
+    "1.0.1": {
+      "tag": "vrch-visuals-v1.0.1",
+      "source_commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+      "archive": {
+        "name": "vrch-visuals-1.0.1.zip",
+        "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.0.1/vrch-visuals-1.0.1.zip",
+        "sha256": "19388ab375eec7eb033390503ce223ab511ebcf4c37a82a40a115b00a7e797f1",
+        "size": 3465711
+      },
+      "release": {
+        "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.0.1/release.json",
+        "sha256": "7aa6abed3825934f3a1d6233ebd1530ca409520ad083d40d2a9c6a280f6dc09b"
+      }
     }
   },
   "visuals": {
     "user.vp-beat-fracture": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -84,6 +98,70 @@
           },
           "signatures": [],
           "fingerprint": "c24e1f6611855e022814519b4d90013c63071f485016923ccd44bef8696631ee"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-beat-fracture",
+          "publisher": "vrch",
+          "name": "Beat Fracture",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "a29f0a0407555b3b4687c3b23117b6fb0deb185a5fa39682077522f07708652c"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              1
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/beat-fracture/definition.json",
+              "sha256": "1e60007e066a9ef80f57b1458b6a2cc142147ca5d73f522a12a6d8f451b55aff",
+              "size": 9590
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/beat-fracture/visual.json",
+              "sha256": "022dbf30e12730b82ad41f87383787832e0c8cecc4f8a94067c84a16cff78a43",
+              "size": 348
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/beat-fracture/CHANGELOG.md",
+              "sha256": "4e291f6a29e7c25279dc7c6709fe2eb3d0cd908e0955697874bc5c24a0242d2b",
+              "size": 191
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-beat-fracture.webp",
+              "sha256": "e5485e1d2ebfc719fdb1754ca6ddf0ebb84f77ff35e1399c1f3293544cb41e25",
+              "size": 57146
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "9a49f0899615499ff023222b13334b8931309addbf5a13dd16b8d3a227955659"
         }
       }
     },
@@ -461,7 +539,7 @@
       }
     },
     "user.vp-chrome-bloom": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -533,6 +611,77 @@
           },
           "signatures": [],
           "fingerprint": "bb39186adc1dc97f6fcab587447c90e4a9c939390fdd65b4987b6f798feb5fe7"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-chrome-bloom",
+          "publisher": "vrch",
+          "name": "Chrome Bloom",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "4e838bfa98e0078907d21d16e7ca49cb6cc7eef9d491dc51de270c960cca9d01"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "coarse"
+            ],
+            "sources": [
+              0,
+              0
+            ],
+            "signals": [
+              "audio.v2.beat",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/chrome-bloom/definition.json",
+              "sha256": "276cf5d0eb88f8fcedd3e17658cdda2b808fef662f3bbb8debbe6007c689c19b",
+              "size": 12896
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/chrome-bloom/visual.json",
+              "sha256": "cea97e5c1fd027e5e41f1276b30b889c44569b71197d4154164dc0a1c56fb4bb",
+              "size": 346
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/chrome-bloom/CHANGELOG.md",
+              "sha256": "3ee4c1e501e12567e70ea7dcf2a5b3a043608d9ee268aa9070e993afbc908c65",
+              "size": 174
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-chrome-bloom.webp",
+              "sha256": "fad8b930f39b7a8489bd10b7d4d6cfeec44398e887ce662c9b0f320c4a5ce710",
+              "size": 9228
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-chrome-bloom",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "af5b1e3431e2403f8ae72b33e929c2b3f084af1262a9fffbc96d1671c000d7ee"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "1fdee3057f29799adbb1cb0f7d7ad196b247132704366a4de5dfc9c652f65297"
         }
       }
     },
@@ -979,7 +1128,7 @@
       }
     },
     "user.vp-gallery-shutter": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -1053,11 +1202,84 @@
           },
           "signatures": [],
           "fingerprint": "03c6dfda6471680811bdbce4e07cf4f6994ac45744d9f8c27aa31ece1cac8b13"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-gallery-shutter",
+          "publisher": "vrch",
+          "name": "Gallery Shutter",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "fd56429fa13a4252c3e0ecaad8738e08112365205aa2ce1ecb33815d012537be"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "frame"
+            ],
+            "sources": [
+              2,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/gallery-shutter/definition.json",
+              "sha256": "5c08fc68c161a0f1341ec71578d406a1cc3b03f3ab6d94f28767a3fcf68791de",
+              "size": 18412
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/gallery-shutter/visual.json",
+              "sha256": "a714a0d43eb1591ea960a243f49d972269b0a3ce4d18d93b85a990ee60c093d2",
+              "size": 352
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/gallery-shutter/CHANGELOG.md",
+              "sha256": "720506e6e55c94868fb59fa3fa7078e2418bac86e64fe8b0965da4c2fa8ebcfe",
+              "size": 193
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-gallery-shutter.webp",
+              "sha256": "b2a56cfeac7e5fed4356cc6c6ccc05ce81902df50d67368898b938ba58ea77c4",
+              "size": 54452
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-gallery-shutter",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "9bf956fd0c07ced736f400ac042aabb6535bb843649781afcdcb88bbce9b4dc4"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "b5d561b796bb6caef43f4b4731bbbbc73e2c0f6aae08c0b1a09e0866b3b582ba"
         }
       }
     },
     "user.vp-gesture-weave": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -1135,6 +1357,83 @@
           },
           "signatures": [],
           "fingerprint": "7a8db3f770c0eb6353c0cc1bc555af81755e6f32173b9fe2566a48c9ebdac96b"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-gesture-weave",
+          "publisher": "vrch",
+          "name": "Gesture Weave",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "0f7ce36c24639e148474974934a4392b404eec9c5a444b0476a2f1e5f86dced9"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "tracking.pose.hands_x",
+              "tracking.pose.hands_y",
+              "tracking.pose.hands_confidence",
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/gesture-weave/definition.json",
+              "sha256": "aad619ccf32813f9357bb7020e770b5814fdf58161e40b49087f9ff7e74bd855",
+              "size": 10292
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/gesture-weave/visual.json",
+              "sha256": "fb324fc3906670fbef080f82067c00f69fff7c75f6d55597791dd31494325d46",
+              "size": 348
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/gesture-weave/CHANGELOG.md",
+              "sha256": "cbbf78c66be16aeeeea16e81d1a98a8a568adc0c90ec0b2da2c69032fe4b9fcc",
+              "size": 175
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-gesture-weave.webp",
+              "sha256": "acf3eea1f914b1b9428b5ebc1bc6a482add0ecea04007b1975ec3bb4fd6dc8b8",
+              "size": 9460
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.vp-gesture-weave",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "a4e3c1fc8f27ee822abaaf152b7b82b04de9e51966787b02e8d4a8c46c9d7097"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "d828432ebb1f6b43e3425e94ccbfe283d65d42998f0921247156e52c639e9045"
         }
       }
     },
@@ -2246,7 +2545,7 @@
       }
     },
     "user.vp-ink-flow": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2327,11 +2626,91 @@
           },
           "signatures": [],
           "fingerprint": "dc082a18ad5dbd4155230bf2cc417d8692f6b66b7bfb0662fe84bfe72f465c3f"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-ink-flow",
+          "publisher": "vrch",
+          "name": "Ink Flow",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "161422568ed56d2d49f199669e7c6098267f2d990f2308198f346b72fce4007a"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "frame"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.hands_x",
+              "tracking.pose.hands_y",
+              "tracking.pose.hands_confidence",
+              "tracking.pose.hands_speed",
+              "audio.v2.beat"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/ink-flow/definition.json",
+              "sha256": "8e9680e5e057ad4f2933d7bd5ace0f5b4cc2d68fa532a916fc49be2c06f6b72a",
+              "size": 16764
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/ink-flow/visual.json",
+              "sha256": "e1656c2f511f7a0b6a14a572eff5205df0954949f66906b0e5a4aec236550fb4",
+              "size": 338
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/ink-flow/CHANGELOG.md",
+              "sha256": "7a9bb2393dcdec1f49e808224409cc4d73514df5630b1152af246575aab3cb1c",
+              "size": 170
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-ink-flow.webp",
+              "sha256": "52f660300f07d8b7f4ed47aadd13377fa685fc5ae82b8a748848308a55ab11c2",
+              "size": 4820
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-ink-flow",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "49c1d6ab1ea322225698f2fe7d62532534f8942821555ff1008774ab43869456"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "83480bdbca198c7ac30420a0ab41c9d819472076ae7b22d3beebf516ac7d11c0"
         }
       }
     },
     "user.vp-kaleido-bloom": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2403,11 +2782,82 @@
           },
           "signatures": [],
           "fingerprint": "eda03c7626826021e144e6a886ebf6df036db1b951a77d0b6a8e40aa95492818"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-kaleido-bloom",
+          "publisher": "vrch",
+          "name": "Kaleido Bloom",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "f3246107528e345082bfc66a9a54cbf1cd1db5ad6ab272bd3d2a7cf14787a1a1"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.left_hand_x",
+              "tracking.pose.left_hand_y",
+              "tracking.pose.right_hand_x",
+              "tracking.pose.right_hand_y",
+              "tracking.pose.hands_speed"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/kaleido-bloom/definition.json",
+              "sha256": "7b3cb5e9e8cb4ada4097864fb09d4cdaf2cd72c6775eb02fb01de9f1723c370d",
+              "size": 13498
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/kaleido-bloom/visual.json",
+              "sha256": "fd6a478c0920b6dd4cac7b1ea29290ba5e5481fd4c3ad15b86bcef8af21d0ab5",
+              "size": 348
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/kaleido-bloom/CHANGELOG.md",
+              "sha256": "5037e586fdfb2b91e2e6d2af117020ac8c211e83589a5490aade68e0750d7722",
+              "size": 175
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-kaleido-bloom.webp",
+              "sha256": "4081d0ac3c415051feafef6ad3b286c62498df1e7bb4ae1eb9968f3ed7c51a1d",
+              "size": 29596
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "2086d2917a6ff01240c14360917ff8cd628e4c02a74420cb5e3f8bf968f4c501"
         }
       }
     },
     "user.vp-laser-fan": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2480,11 +2930,83 @@
           },
           "signatures": [],
           "fingerprint": "5dcdd100fa67ca3579f06b2e8613df1c3d1bdbb7ba93ff629899dcf595435611"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-laser-fan",
+          "publisher": "vrch",
+          "name": "Laser Fan",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "7ebe3be6b791a329c98445e6e8356c56b00d70603f7779fdd3edb77ecab91715"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "frame"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.left_hand_x",
+              "tracking.pose.left_hand_y",
+              "tracking.pose.right_hand_x",
+              "tracking.pose.right_hand_y",
+              "tracking.pose.hands_speed"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/laser-fan/definition.json",
+              "sha256": "8a85a67ffe8c308ee69894436a8cd8031fe5d96cfbf69c106158a9c45ea1dcf3",
+              "size": 13778
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/laser-fan/visual.json",
+              "sha256": "bff22e05f7ee337d4a03630124ceb6d2d8145a4a58b4b23cc37c2f50a7f4601b",
+              "size": 340
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/laser-fan/CHANGELOG.md",
+              "sha256": "2ee6cbf1ae020f59656e10a8b456e231473f9a68e96b7996b0135c4e6d3769da",
+              "size": 171
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-laser-fan.webp",
+              "sha256": "6ccd88001aadee828fc371f03909e341009fda21bcb90a57555445b268af30a7",
+              "size": 15838
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "ae8ab3598132ed0d9f43d8eaa3cf0f66246bdc76105328cbd5b26d9b0590d19d"
         }
       }
     },
     "user.vp-luminous-tiles": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2557,11 +3079,83 @@
           },
           "signatures": [],
           "fingerprint": "857aa91b8b9a2e70a6fed6d4b59bca17f71bd9c162f65a85ba6e29a0bcf67e9b"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-luminous-tiles",
+          "publisher": "vrch",
+          "name": "Luminous Tiles",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "81d627b5957598cbed954872c0957cfe084cb6e311f03df6ceb18b9ceb15eeee"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              1
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/luminous-tiles/definition.json",
+              "sha256": "19dccdc11b42fcd9e29d43173ad1118f8aef11b69c3f05c7713edd6d64f55f0e",
+              "size": 11713
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/luminous-tiles/visual.json",
+              "sha256": "f9124b810f12486c71a21cd457ed3f9ceed1550f0a6a463a2f1f96bc50db0eec",
+              "size": 350
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/luminous-tiles/CHANGELOG.md",
+              "sha256": "b329e536bd99be6afe29a0879271509740ce23044b3f7921cef1ae4be8062649",
+              "size": 192
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-luminous-tiles.webp",
+              "sha256": "d439c0c7d2a6645aa36c5b57df601a5f9bc180bc44a2d802b75f0d43fac11ac4",
+              "size": 65720
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-luminous-tiles",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "2be0d96979f3915eac90ec5ca9e0f8defbbb6597f078664a896926e4036d1ac1"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "53dee37e8aa0d3331999dc100eb6f89a0dc9d5b65e0bebfa3ee57f640910c517"
         }
       }
     },
     "vrch.matrix": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2632,6 +3226,76 @@
           },
           "signatures": [],
           "fingerprint": "a49e085942e3d9cb4d958ea373fe458425a93820f325851bc157d7fcaed13514"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "vrch.matrix",
+          "publisher": "vrch",
+          "name": "Matrix",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "7bf20d33900caeb902873f7f9209812a7d45b26cff79f52ffcdd860c61107225"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              1
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/matrix/definition.json",
+              "sha256": "cc53a0dacae34f97a8f017309ac7b0d3629c7847dc4d4edfc532f8ef62ab8e9e",
+              "size": 10439
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/matrix/visual.json",
+              "sha256": "a7f19c23252e8a2877318d02a123966a351d6ae6b904e7fcf13a897f44a521fd",
+              "size": 348
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/matrix/CHANGELOG.md",
+              "sha256": "fbc40f4278164ae60b7d4afdf6df2ae73e4afa1fc9fd18c123145a12638b7295",
+              "size": 181
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-vrch.matrix.webp",
+              "sha256": "57d7efdb4d185aa764240bdd4ea1067c1070ecab0f41ebe63a040c2100a4e393",
+              "size": 49772
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/vrch.matrix.png",
+              "sha256": "bf4232c01060d44bd7ca6bb38e23f286cb10628a7bb8982bf98189e334deeb7f",
+              "size": 286087
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "4cd70674c9e050a29083475ef3cea6b395732ff74acd225e694b2b9ac184926e"
         }
       }
     },
@@ -2782,7 +3446,7 @@
       }
     },
     "user.vp-paper-blocks": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -2858,6 +3522,81 @@
           },
           "signatures": [],
           "fingerprint": "fc28be337592eaf5ebe776fb18629eee98b29bfc7c542b5ec82e2b9cd6493ea7"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-paper-blocks",
+          "publisher": "vrch",
+          "name": "Flip Mosaic",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "e856f507ccada3f2893b2cfd2523e03a41ccef223be82a2cae4a88cc555524bf"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              2
+            ],
+            "signals": [
+              "audio.v2.energy",
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.beat",
+              "audio.v2.onset",
+              "audio.v2.flip_tiles"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/paper-blocks/definition.json",
+              "sha256": "f83d37ab5ab24abb8526ff856f180ed9ca197045ca2186b7122b5ace43a3877f",
+              "size": 9567
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/paper-blocks/visual.json",
+              "sha256": "32d65a4ed199ed5fb003d2922a19acf4e9ab5a8689253d97e917cdd4c8e1fdb2",
+              "size": 346
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/paper-blocks/CHANGELOG.md",
+              "sha256": "5d72ce6b8868814caddfa7400ce6383f428ac0a21bdd9e60495546026515b11c",
+              "size": 190
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-paper-blocks.webp",
+              "sha256": "32083ff60e46ec57ba28f32cb95795cd190a5c95ba6802fed7b542c6628c5837",
+              "size": 57234
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-paper-blocks",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "ffbc362153e225147f1c19f0e388b591db7778ab8190c78edf79a26c1ffa8258"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "9cd98aca067d878e41f940b6a9abef69ad69156a89ed5f494bdf3dd0312e1b52"
         }
       }
     },
@@ -3063,7 +3802,7 @@
       }
     },
     "user.vp-print-echo": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3136,6 +3875,78 @@
           },
           "signatures": [],
           "fingerprint": "229367f14f242ef3b078b591e9abb4b7c8ad3347e04c61e5e04a015383aa5b5c"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-print-echo",
+          "publisher": "vrch",
+          "name": "Print Echo",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "1766b1b03af3435604d4c1676296b9eb22a429b80ec02d1984d82c672cf1a5f8"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              1
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.beat",
+              "audio.v2.mid",
+              "audio.v2.energy"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/print-echo/definition.json",
+              "sha256": "5d8398ebf3972bdcf7ca487623cf59e75a165ddaa56a2c2cc1819b3427b123f0",
+              "size": 9618
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/print-echo/visual.json",
+              "sha256": "4ee4432370b33b959fe1bfb0e67b878bbfe21f64e22c6018919197322be11f39",
+              "size": 342
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/print-echo/CHANGELOG.md",
+              "sha256": "fb3b656cb0cf8fd56f72dd3b96aed2e0e1c86fe66da8dac4f4d899292d5f1f6d",
+              "size": 188
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-print-echo.webp",
+              "sha256": "83a21e13d65ee3eb5157618c74deaba87bb411e3132d081d66cdc583394f7b94",
+              "size": 35840
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.study-print-echo",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "eb0187c0a9bc0a2b1370aea1a23c3539e5a54d20ce94a55a617a2e05d47b286e"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "ac4642bc5f433aaa80f5a5e71a0d8f4d278159824d490c9746cb4f0adaec0b8c"
         }
       }
     },
@@ -3361,7 +4172,7 @@
       }
     },
     "user.vp-pulse-ridges": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3435,6 +4246,79 @@
           },
           "signatures": [],
           "fingerprint": "01b93e5a959d7c33ccfc64b514aca4e506133cc221c21637567306f9c547d7e2"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-pulse-ridges",
+          "publisher": "vrch",
+          "name": "Pulse Ridges",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "dbb2dd2fb6b262fafe34e4f8c3624b65702606b58bff064357dc2a0c200c7501"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "frame",
+              "coarse"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.left_hand_x",
+              "tracking.pose.left_hand_y",
+              "tracking.pose.right_hand_x",
+              "tracking.pose.right_hand_y",
+              "tracking.pose.hands_speed"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/pulse-ridges/definition.json",
+              "sha256": "9c7c1ac68ee4bb724f7285e48fefdb8328cdd236c6bef0a31491559307c65fb6",
+              "size": 18723
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/pulse-ridges/visual.json",
+              "sha256": "b3f51d7330ee9e68d166aebe965b468afca4071c3461eda4718da9daf4bb3cd3",
+              "size": 346
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/pulse-ridges/CHANGELOG.md",
+              "sha256": "d4a58f2bada0a99ba50950d6dd017dc2382fca5b95c42477f5e123bae298f14a",
+              "size": 174
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-pulse-ridges.webp",
+              "sha256": "c2e904b1ee0916270b28b5e1e14392d78b66433335b54f5eb42690c99cddc1b1",
+              "size": 12352
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "7b328fd6d6698d82b0ea098fd6febe9fcd504ac675ad5ac1bb936213f2e22c74"
         }
       }
     },
@@ -3508,7 +4392,7 @@
       }
     },
     "user.vp-rain-glass": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3579,11 +4463,81 @@
           },
           "signatures": [],
           "fingerprint": "f610eac1471ed4c7750e0edfd355cde9d66a1847069470cfc6084536119a13a3"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-rain-glass",
+          "publisher": "vrch",
+          "name": "Rain Glass",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "e9c94e4fcb389058d3e3c417a81ec0b6acdb62a1eba8591f81e2ae09d2269db2"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              1,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.left_hand_x",
+              "tracking.pose.left_hand_y",
+              "tracking.pose.right_hand_x",
+              "tracking.pose.right_hand_y"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/rain-glass/definition.json",
+              "sha256": "895121885c14b86ffd6592816d74c0ddc862c416300ba7d8d0f093316e5f66bb",
+              "size": 14992
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/rain-glass/visual.json",
+              "sha256": "e41e194cb446db25d74ed65617cb72c03e2a0c04eb5e94a37dc814f2fcec499e",
+              "size": 342
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/rain-glass/CHANGELOG.md",
+              "sha256": "ed99cdd188ea2b9231974b1cf21461d101bbde8030a906c06f3329db9a91b98b",
+              "size": 188
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-rain-glass.webp",
+              "sha256": "62a6916d1ee4bbdc86d05d3db9499ee4120bbd485ba5e6e686036c716911f6eb",
+              "size": 54190
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "68903cfeef8ddec7ae3e5b53585080eae33ade28ee0cef51dc0de15c44fd334f"
         }
       }
     },
     "user.vp-rhythm-press": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3657,6 +4611,79 @@
           },
           "signatures": [],
           "fingerprint": "5765ea691d2c36bb608bf4bd88610ccc377ff1b1c4985c6f2a41ce225ff1bd31"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-rhythm-press",
+          "publisher": "vrch",
+          "name": "Rhythm Press",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "030ce4f327bdaf0e8ea4d7d9fdc38ff7c3aaaa5ef2fadb0e4ea57fd81adeb6f6"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "frame"
+            ],
+            "sources": [
+              0,
+              0
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/rhythm-press/definition.json",
+              "sha256": "d03fa1df706756e24897d9920d7665dfb075aaaefbe7920647d1381aa8c7bc89",
+              "size": 16080
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/rhythm-press/visual.json",
+              "sha256": "a943672dfb1819ef090422cacf96b0f261babc183b4c222e7add6ca743db3a91",
+              "size": 346
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/rhythm-press/CHANGELOG.md",
+              "sha256": "da18fcd93206d03c420e98ac753a7989e4815467fbe4b8b564cd77a2c217191e",
+              "size": 174
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-rhythm-press.webp",
+              "sha256": "d8013cd2784d3cff69873683d53ec13faf421258c4e6b5506413d5288f85978c",
+              "size": 40646
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.vp-rhythm-press",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "b13866b82ed3b04993e9ef39fee5b7728f9c39e6e9610fed297435ea6ab41434"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "a2e8d5d44adc785ea9675a8423874a379947799c3c15e23ea41bb165872bdc75"
         }
       }
     },
@@ -3736,7 +4763,7 @@
       }
     },
     "user.vp-solar-flare": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3817,11 +4844,91 @@
           },
           "signatures": [],
           "fingerprint": "c9fe44afb1a19cad0733863de07d3444b7723b89e9fc6395b0499833a9968584"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-solar-flare",
+          "publisher": "vrch",
+          "name": "Solar Flare",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "188e8146a9598d91b0e25f8a128f4a0b032fe839d96666bc1390ec0d6f65c13c"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main",
+              "coarse"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.left_hand_x",
+              "tracking.pose.left_hand_y",
+              "tracking.pose.right_hand_x",
+              "tracking.pose.right_hand_y",
+              "tracking.pose.hands_speed"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/solar-flare/definition.json",
+              "sha256": "4c98cafeb530399127a92990c3c837334bda9a52f73bc4ab20e1435928af2a06",
+              "size": 19559
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/solar-flare/visual.json",
+              "sha256": "bf07bb40f93540d7ed511074880e1a047e35fb9871edac30f52f5da59691b382",
+              "size": 344
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/solar-flare/CHANGELOG.md",
+              "sha256": "de002539ce5632d48d75e4fcf734115abdc79a6d053b4e759cac751dedb100bd",
+              "size": 173
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-solar-flare.webp",
+              "sha256": "767c046361b1ec59b23f497437626887e5129c061dcb2f1dc31e37bdf1ff0a95",
+              "size": 18194
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.vp-solar-flare",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "23249c71dd05b6ef27457ffd52b97c9a22415533fd4932382aa54e641c647e18"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "00d0b8936c2b8c6f04900fecdd919ad527543d9abdfee8882a9fba9bf7e366ea"
         }
       }
     },
     "user.vp-spectral-ribbons": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -3889,6 +4996,73 @@
           },
           "signatures": [],
           "fingerprint": "21534d6d646d2c4deaf1489186ab7dc6d9f5f5b1f719b334162bf7dc7d684e04"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-spectral-ribbons",
+          "publisher": "vrch",
+          "name": "Spectral Ribbons",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "d6c6f1aaca10d6ddc4d91ea0d87d6ac7d1a22df30354ef5221cb1e0b7996a4e8"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.spectrum",
+              "audio.v2.onset",
+              "tracking.pose.hands_x",
+              "tracking.pose.hands_y",
+              "tracking.pose.hands_confidence"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/spectral-ribbons/definition.json",
+              "sha256": "b642979b26e4b6ad8d141125ce5677fe1be3a555c71ee20686038627ef9e9419",
+              "size": 13434
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/spectral-ribbons/visual.json",
+              "sha256": "018e6b45c445033b113699bac793c4337f27fb39e93cc45fe3cc0904b10f31d0",
+              "size": 354
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/spectral-ribbons/CHANGELOG.md",
+              "sha256": "5b51c1620b0f95d93709aa93af81081ea7508d23fc16d2fbe55aa8400917dec2",
+              "size": 178
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-spectral-ribbons.webp",
+              "sha256": "a4be44df07c7420aa5e7cf24147ed3f0f54ffe6c6a4a5532015c4da59a5b8b8d",
+              "size": 16902
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "43c027b000bbe5d1641f3ae587d8e3472183e6500a641697e5f14f2e52fe1900"
         }
       }
     },
@@ -3962,7 +5136,7 @@
       }
     },
     "user.vp-tidal-light": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -4035,6 +5209,78 @@
           },
           "signatures": [],
           "fingerprint": "8731b7a46e149c2e4bccfd204582f6bba7cb3cc8d73ffd8ec2b9f88df62aea2e"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-tidal-light",
+          "publisher": "vrch",
+          "name": "Tidal Light",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "e18f29aae2bc2e96ac20f98061cd4f954f7cdd958f1281fd0eaf0316c046c451"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              0,
+              0
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset"
+            ],
+            "analysis": []
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/tidal-light/definition.json",
+              "sha256": "b77be57e6aa334568857b514f47670ba3252ce3ae6658f9a560f62be40c707d6",
+              "size": 10305
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/tidal-light/visual.json",
+              "sha256": "48b7774bb95e65405138f0b2c3dad10baf9b82abfc1a2aec30e8ae968f5e3536",
+              "size": 344
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/tidal-light/CHANGELOG.md",
+              "sha256": "42ff1f01cce8a8ebc98229d6e27254c0c84926d31f7f08d0052e8aeafb8ccba6",
+              "size": 173
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-tidal-light.webp",
+              "sha256": "84c17c71c8c0f2276993e206e9ce42eb0694212c4ee442ce8abafaf74f767795",
+              "size": 17490
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": [
+              {
+                "key": "visual:user.vp-tidal-light",
+                "digest": {
+                  "algorithm": "jcs-sha256",
+                  "value": "84d8269720ed09f3af6956a567298a6e76cd47aa9a48396a9e6e47d795a94225"
+                }
+              }
+            ]
+          },
+          "signatures": [],
+          "fingerprint": "54914a2422dec83244e82836d2035c0cf711466b6bdb95fe910d9ca22dd08dc5"
         }
       }
     },
@@ -4100,7 +5346,7 @@
       }
     },
     "user.vp-warp-drive": {
-      "latest": "1.0.0",
+      "latest": "1.0.1",
       "versions": {
         "1.0.0": {
           "schema_version": 0,
@@ -4171,6 +5417,76 @@
           },
           "signatures": [],
           "fingerprint": "c9add5ce74891dedf4819224ce75ccbb3e383176638eed7d9e966b8a0d8a7a03"
+        },
+        "1.0.1": {
+          "schema_version": 0,
+          "kind": "visual",
+          "id": "user.vp-warp-drive",
+          "publisher": "vrch",
+          "name": "Warp Drive",
+          "version": "1.0.1",
+          "digest": {
+            "algorithm": "jcs-sha256",
+            "value": "999502936ef1bfc38b7f0c8b5073739204bbb0e1ea513f2db43a8979098de039"
+          },
+          "tier": "free",
+          "license": "MIT",
+          "requires": {
+            "abi": "vrch-mainimage@1",
+            "stages": [
+              "main"
+            ],
+            "sources": [
+              0,
+              2
+            ],
+            "signals": [
+              "audio.v2.low",
+              "audio.v2.mid",
+              "audio.v2.high",
+              "audio.v2.onset",
+              "tracking.pose.hands_x",
+              "tracking.pose.hands_y",
+              "tracking.pose.hands_confidence",
+              "tracking.pose.hands_speed"
+            ],
+            "analysis": [
+              "pose"
+            ]
+          },
+          "files": [
+            {
+              "role": "definition",
+              "path": "visuals/warp-drive/definition.json",
+              "sha256": "90a9abf4af9667cac7a9e62238b65a8802e7ddcd0d6ef4731feac3ae56d62136",
+              "size": 11045
+            },
+            {
+              "role": "metadata",
+              "path": "visuals/warp-drive/visual.json",
+              "sha256": "e031f45ed7c9a4078c30cf75c2d0e5b353aac1f63235b3b5f09ef714837eeb4e",
+              "size": 342
+            },
+            {
+              "role": "changelog",
+              "path": "visuals/warp-drive/CHANGELOG.md",
+              "sha256": "93100a8bd5897f1c5e5db1520ec02434fed6329a939069d7a263909f7c423264",
+              "size": 172
+            },
+            {
+              "role": "thumbnail",
+              "path": "thumbnails/selector-user.vp-warp-drive.webp",
+              "sha256": "b740c120fbf4a0a5cb1aeffe2153c397410f2d14ed0cca111a5fa2f5907b35e7",
+              "size": 39434
+            }
+          ],
+          "provenance": {
+            "repository": "VrchStudio/vrch-visuals",
+            "commit": "731826655aa65f55a8358ac92b9c0c70f6d54c21",
+            "derived_from": []
+          },
+          "signatures": [],
+          "fingerprint": "c4c3e957f035488633062733f649b435a409ebc7b731a663335794f41c81ab68"
         }
       }
     }
