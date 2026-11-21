@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "vrch.image-procedural-composite",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:a7e42b580be90deae1a5f86a703492438cb50af8a402e0521ebccc157df3e41d",

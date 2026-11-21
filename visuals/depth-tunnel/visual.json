@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "user.vp-depth-tunnel",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:29e4181e75858e5257c8c348d5a3aa58ae6dc39c41e25a376fa02c8cccd2db3e",

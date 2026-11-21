@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "vrch.image-adjust",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:01ae5a20fdaef889a83e1a33d11caa81b1e4e4f2aa2eebaf40b9ec5e11fd1992",

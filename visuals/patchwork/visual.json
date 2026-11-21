@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "vrch.patchwork",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:0d4b18fb1e1b3db450fc2e5693d228ed3f197794cc738acf6c89fe88c241d076",

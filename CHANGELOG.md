@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2]
+
+- New previews for the Foundations and Demos visuals and the catalog images, drawn the same way as the Curated ones; none shows a person. The tracker line drawings stay.
+
 ## [1.0.1]
 
 - New previews for the 18 Curated visuals, all drawn the same way from the visuals themselves; none shows a person.

@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "vrch.mosaic",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:bee57c6f4b13110df61c0be75cd66664406fa27933723603563e6aefc089e546",

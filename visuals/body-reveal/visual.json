@@ -2,7 +2,7 @@
   "schema_version": 0,
   "id": "vrch.body-reveal",
   "publisher": "vrch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tier": "free",
   "license": "MIT",
   "content_hash": "sha256:908c66650531973217851674b781fee088425c03e962dd9e260f95efee90ffc0",

@@ -1,5 +1,9 @@
 # vrch.matrix
 
+## [1.0.2]
+
+- New preview, drawn from the visual over a picture without people.
+
 ## [1.0.1]
 
 - New preview, drawn from the visual over a picture without people.
