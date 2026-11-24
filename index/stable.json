@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "latest": "1.0.2",
+  "latest": "1.1.0",
   "versions": {
     "1.0.0": {
       "tag": "vrch-visuals-v1.0.0",
@@ -42,6 +42,20 @@
       "release": {
         "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.0.2/release.json",
         "sha256": "2318a467973dee70db10d00f0466959a9ef1c7f38fa2320c3442bc8064fd618e"
+      }
+    },
+    "1.1.0": {
+      "tag": "vrch-visuals-v1.1.0",
+      "source_commit": "7bc67d069d8ac1597c9a1e5d2f042baf23c61ca3",
+      "archive": {
+        "name": "vrch-visuals-1.1.0.zip",
+        "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.1.0/vrch-visuals-1.1.0.zip",
+        "sha256": "91c28b80b479c124346dfa37c15518f6cec457700cedf7ee35aea67176e3f196",
+        "size": 4504221
+      },
+      "release": {
+        "url": "https://github.com/VrchStudio/vrch-visuals/releases/download/vrch-visuals-v1.1.0/release.json",
+        "sha256": "58f61aea07d808c3c5936feffaf3c42d0b422fc66d194b64e84e5a358126390b"
       }
     }
   },
@@ -7191,6 +7205,407 @@
           "signatures": [],
           "fingerprint": "c4c3e957f035488633062733f649b435a409ebc7b731a663335794f41c81ab68"
         }
+      }
+    }
+  },
+  "package_archives": {
+    "user.vp-beat-fracture": {
+      "1.0.1": {
+        "sha256": "a41dff0df666e6827481bad0ed39f8fb13b4bdd68b54211fee752c364a3fbbe3",
+        "size": 71143,
+        "package_digest": "0097931b2b27e64e1c60925b87006b69db2e19d22a81776f5512f692ccfef946"
+      }
+    },
+    "vrch.bitmap": {
+      "1.0.1": {
+        "sha256": "1a4d364f02d43b53d37a6655df874cb4294cc41caabf6b249da0b64174cc6c2e",
+        "size": 51762,
+        "package_digest": "151c69ed88139c6af1a6b4cf5d00abfba1bacfdd48b6224674f4b7a123fd9eaf"
+      }
+    },
+    "vrch.body-focus": {
+      "1.0.0": {
+        "sha256": "a11af86625e2536262327ae59ffab5078f014a4f05ccb6081ad582754102c1ae",
+        "size": 20859,
+        "package_digest": "c290b852f53d64754fdb5c3373c26a1019514ce43fb46e02055c19369798961a"
+      }
+    },
+    "vrch.body-reveal": {
+      "1.0.1": {
+        "sha256": "829c2a616a2a46afcff18bd73894ea1178778887c9c60a5c0f66f0131b0bce84",
+        "size": 88391,
+        "package_digest": "c7dc4c3618c2fb6f1f4186a93a116f413ea42f624e9bad293f3a2f86798caab9"
+      }
+    },
+    "vrch.body-tracker": {
+      "1.0.0": {
+        "sha256": "cc1ccfb99db041cb48d802a1b823b1a8cf16afe7b837d624e6f7042ad8aa54bc",
+        "size": 28524,
+        "package_digest": "451f6b88a8c36867da6e1beffee23e8a42eb843217bec0a21c484299a39ef864"
+      }
+    },
+    "vrch.channel-shift": {
+      "1.0.1": {
+        "sha256": "ec3b2d54f6a740fc7432fae0d468d1161c8d364adc59e3a18e2ca90b28a7d79a",
+        "size": 132870,
+        "package_digest": "aeecd7807476dc64a46f98cd651a44690de057950488b373c8314ee72b22cf11"
+      }
+    },
+    "user.vp-chrome-bloom": {
+      "1.0.1": {
+        "sha256": "684ee25ae47bc5fe9c035e72889ff2e84ff3e7087ccacad90377663414219d0b",
+        "size": 26699,
+        "package_digest": "b759943d018421f1e20c8fe6a9498d21776b10266e15a120cafe9a9c613f7573"
+      }
+    },
+    "vrch.color-halftone": {
+      "1.0.1": {
+        "sha256": "21a8aa00081bf25b4b2ee75f901efc9f5f5196e7c3cc17b18178060555f6ebb9",
+        "size": 277178,
+        "package_digest": "1fedddf2d41613ae5675bc00058eefe1c65a907b86e347cae9e384ea7fb8b6af"
+      }
+    },
+    "user.vp-depth-tunnel": {
+      "1.0.1": {
+        "sha256": "9012e9302daac4cdec083470a4f522b1a6d49b3342a718d8d5294f01d8d17178",
+        "size": 49704,
+        "package_digest": "4d059477467b2d09d5dabd089ec67652c3df5e89bffce71845813a840fcab394"
+      }
+    },
+    "vrch.embroidery": {
+      "1.0.1": {
+        "sha256": "9785e3c28557a0f06bdec182ce5404ab40d331499b876f703271a4a96f7193cc",
+        "size": 128674,
+        "package_digest": "d5eac07acfadbb3f59fc0ba1da3e0ab88e98b7c6d184abd35191ce8584d22b1d"
+      }
+    },
+    "vrch.face-focus": {
+      "1.0.1": {
+        "sha256": "74e23b00176fe08f62602bebf3939ba98685df665c1e07d55da2c241c3fb670a",
+        "size": 47782,
+        "package_digest": "9bc702cec7d0d925c3645d04a06275fe0df69c936285f0f835a886170b7aefec"
+      }
+    },
+    "vrch.face-reveal": {
+      "1.0.0": {
+        "sha256": "e413b4f4d0203e6bd97a21f84e20b3a703e996c432e13d04a42d8f5ce67b35b2",
+        "size": 17506,
+        "package_digest": "a4c05c062b174da662b51dfc2e3d940e867979685960eae0076c2bbad0fe852c"
+      }
+    },
+    "vrch.face-tracker": {
+      "1.0.0": {
+        "sha256": "980cda25a3054a82eb2984d4008a3ca03bbf1a9b277125b90ec0ad4dd198c2e7",
+        "size": 26919,
+        "package_digest": "d6b70ce02b46590d56a3bea6d415e52255709f05ff46b14e4268db6b55d0f65f"
+      }
+    },
+    "user.vp-gallery-shutter": {
+      "1.0.1": {
+        "sha256": "9012a4e4557a5905e7902c6910bcbd1c74b57bb22ee3a1d266133e14df4d4d5e",
+        "size": 77535,
+        "package_digest": "1a081edf87997dbf47ef103d845c2592887d43898d88255c92b464283699a91a"
+      }
+    },
+    "user.vp-gesture-weave": {
+      "1.0.1": {
+        "sha256": "3d671e40b664a65e466d350bf235e1f6f01987dffdb0a439f18b7b7af9eef3d5",
+        "size": 24484,
+        "package_digest": "6878531b8084088c85453b6a61522bdd74dbf1cc83f9f5eb466e39346080d634"
+      }
+    },
+    "vrch.glitch": {
+      "1.0.1": {
+        "sha256": "2af802cf0e5ba347e6635848e1f1039c53b98b8900088ab99ead29adb43edea4",
+        "size": 227555,
+        "package_digest": "790b289f6484b087726cce62321d587f97f74941bcda9610d15a5427639db57e"
+      }
+    },
+    "vrch.graphic-pen": {
+      "1.0.1": {
+        "sha256": "e03ba9f0c1f3334c35c088f1209533f6f3eb253c45f06f124d1595bc43b88fad",
+        "size": 161616,
+        "package_digest": "dfda34ffffa07fe575331f4ee2a2fe27f98dc5603c1e0eed75de8643eeb6b178"
+      }
+    },
+    "vrch.halftone-circle": {
+      "1.0.1": {
+        "sha256": "009a1975865d313dc26b1811357c37afa5ed7c504d5d3dfd06df25e5afa5b2e4",
+        "size": 158432,
+        "package_digest": "f8e3281203065c3c2236fe08b0400ffadf0f7244e4deb3ddfecbfd70344e7944"
+      }
+    },
+    "vrch.halftone-dot": {
+      "1.0.1": {
+        "sha256": "15b1c3253263c070aed5a5d4af9fe504436a9c3d419010348b6c9a1bc1bfa8b5",
+        "size": 147947,
+        "package_digest": "5c8a0020cbd4497d22d426701e5878efe64cb205b5339c9ee34ce326fe09ab8c"
+      }
+    },
+    "vrch.halftone-line": {
+      "1.0.1": {
+        "sha256": "e54e986d4d2883c18900b9e3e27d5ea03823d04ee9e00b03b71ae932d6e41ecd",
+        "size": 127765,
+        "package_digest": "351187583214d7f13cb08b845fa7b619eeabda46a59a06d2e58d128eb342afd3"
+      }
+    },
+    "vrch.hand-focus": {
+      "1.0.0": {
+        "sha256": "80611b999d9029fddc82b42072a636d469446a4bf0f107fd6f7ebc2670e947b2",
+        "size": 22711,
+        "package_digest": "e21612a5765f46dd5979045dc3f94fced810c0e265f744ceeb737adaf1e71d23"
+      }
+    },
+    "vrch.hand-reveal": {
+      "1.0.0": {
+        "sha256": "d78305aa97cf16751e1d3cf0b7528af731e2d44c01d89b8d0cd0294510532562",
+        "size": 21225,
+        "package_digest": "88e7ca2185d476f141335c30a9a5c14e64b926518cc01cf70fd35ea13f892646"
+      }
+    },
+    "vrch.hand-tracker": {
+      "1.0.0": {
+        "sha256": "4a627920f7364038c2c425dd35cfa43a62a2bcf5d5625feed97cce518f1d160f",
+        "size": 30424,
+        "package_digest": "3fe79b99971bd0d0d35940ca8f42808e71d806c1de849761fd92593bd75893dd"
+      }
+    },
+    "vrch.hand-window": {
+      "1.0.1": {
+        "sha256": "e1ccc2878fd875e04a5c52a61e73a74964737aa1776eebd9afbe6f29843535da",
+        "size": 76408,
+        "package_digest": "9387943afc7c544ed0b8b590980a3992c821db6e3e0e616e86bac4094eaa2f25"
+      }
+    },
+    "vrch.hologram": {
+      "1.0.1": {
+        "sha256": "3435644d8124c6eb46f7eb4925a965b567f46c2a24540e530fede7392d662fa9",
+        "size": 171792,
+        "package_digest": "006e402b3974df47029f3835a6a48de75ecc0fe211c128e084a95a85a37c624b"
+      }
+    },
+    "vrch.image-adjust": {
+      "1.0.1": {
+        "sha256": "bed3fb04ad260ecf7c0f32dba5223f965d27b2de5e09f33025b837423f3993a1",
+        "size": 225993,
+        "package_digest": "c3e76110fcfbe5fdb9bde5aeba5c87b055be6fc0efdeee7a511071da7df09d2e"
+      }
+    },
+    "vrch.image-procedural-bands": {
+      "1.0.0": {
+        "sha256": "acfa65095e9500410ee23cc0ec2da7e846c99cf6dc24fb36ca52de48cd4e06e5",
+        "size": 8037,
+        "package_digest": "cbae711c0e63a06b75fa86013751720ee6865389df93601ce5aab1540b86ac90"
+      }
+    },
+    "vrch.image-procedural-composite": {
+      "1.0.1": {
+        "sha256": "0ea2364bef8da9a11046cf1f7b66575bbf23d10f8c9d0e353100738a1702e251",
+        "size": 142351,
+        "package_digest": "55882cb12f7bfc01b3a68852f62dea1b089e62d3cc256e056125dbc019b80ffe"
+      }
+    },
+    "vrch.image-procedural-liquid": {
+      "1.0.0": {
+        "sha256": "1a59208a92bcc4a24a3dc32ec2553b2192d7261081cf3fab2c4fbd70425d1a0e",
+        "size": 8091,
+        "package_digest": "b27c721add69fa8456230295bba742803615e9f162973de0d717c4e4090fa0b8"
+      }
+    },
+    "vrch.image-procedural-particles": {
+      "1.0.0": {
+        "sha256": "a825f9abc8f571f253d2d0f0ef36570eac0b8f46aafc0ba97b8dabdbf33787cc",
+        "size": 8146,
+        "package_digest": "9e6169584e8077fd99dea86f75ac357a798c1708b060de6f81bb4bd140ccfb39"
+      }
+    },
+    "vrch.image-procedural-rings": {
+      "1.0.0": {
+        "sha256": "60776580f2474ec4aa023818be96a17c7becf0b089a3118ddeceabf87aa416de",
+        "size": 7604,
+        "package_digest": "6577e3913c030bfb6f628f79424e2f8773274da264861505f2dffa0574ea25bc"
+      }
+    },
+    "user.vp-ink-flow": {
+      "1.0.1": {
+        "sha256": "9a45c030a4231f94773d38c1592f2afe45f7fc9c217722790f606f2601dbd42c",
+        "size": 26332,
+        "package_digest": "ce55569af62267accc7388cf919b5a4b3686cd3e8400ef4eb6ff301bc7f907c6"
+      }
+    },
+    "user.vp-kaleido-bloom": {
+      "1.0.1": {
+        "sha256": "050287165c36010ce7f1a179fdd7f3602accb9baed68ebc378b2b693d2845837",
+        "size": 47681,
+        "package_digest": "9577d4025e3491697ec0714eb7a301150eb48247e5331e2fa8b4848cc1183606"
+      }
+    },
+    "user.vp-laser-fan": {
+      "1.0.1": {
+        "sha256": "9672bb27c409fa1ca76b7cf00e8a90e036dff0d16437638d9bd3e9a08292a9fe",
+        "size": 34174,
+        "package_digest": "9310613568f5ce56a866adf9e74af855ed2c8b8c7251858df5364e4ac4d1f390"
+      }
+    },
+    "user.vp-luminous-tiles": {
+      "1.0.1": {
+        "sha256": "cdc9e4ed4aaf4cec50f4c0f687f9ba1a8dd0a92fbaf27179fea570ef86f78132",
+        "size": 82077,
+        "package_digest": "354d062062106dd83bf4ae5b59afe4a45a80e3a728bcf9b88794555a7012b193"
+      }
+    },
+    "vrch.matrix": {
+      "1.0.2": {
+        "sha256": "08a3e4aadb602d3736adf8a151057f26361a607ae15fe47d57acbd11ce518eef",
+        "size": 355510,
+        "package_digest": "5da7904bbd9f5d0c410a40d60c54439335aee5d0fec12519187e7b2f76c2e449"
+      }
+    },
+    "user.vp-matrix-rain": {
+      "1.0.0": {
+        "sha256": "523c4e59eb08683833527b9a3a7d739224f51c84f9373ad48eace06a69f63e83",
+        "size": 12090,
+        "package_digest": "1600a64a4e952adb3b3a5cadd0c1b1dc84783b0f361b96e8d0b539538ae9a13e"
+      }
+    },
+    "vrch.mosaic": {
+      "1.0.1": {
+        "sha256": "24f8e079789881bb8243beccc9dcadb65c2d67b30316a84bf01db8e077b6a134",
+        "size": 136097,
+        "package_digest": "386e7d59102e166719751c4e48261840a88aad4a308eeb14d2cde94b96f445bc"
+      }
+    },
+    "user.vp-paper-blocks": {
+      "1.0.1": {
+        "sha256": "bd1330ef3454fbfc963221ef9a7fe7ecdd2bac81e25820e3c2fd9d76d802b85c",
+        "size": 71496,
+        "package_digest": "3220b71365b4328c1eb69f60947c8f9aec78fe308bee7d4a2c914f2c81f80f15"
+      }
+    },
+    "user.vp-particle-orbit": {
+      "1.0.0": {
+        "sha256": "7a1b042e965fa885028b6321bfabeb28aa7b048e49a16d41d5f0f51bbe18dfe0",
+        "size": 11368,
+        "package_digest": "a299a286904c87b8fe0f11f27fa4e2bdad70534845ba4ccde021f42623556be7"
+      }
+    },
+    "vrch.patchwork": {
+      "1.0.1": {
+        "sha256": "45eb30ecc35911aab1208956d31f067374f7eae4e4c8c1a0fd87f2a10768db8e",
+        "size": 115060,
+        "package_digest": "6ec9821d1eb3d8ec19b713dc21c6a446bea60ffe630e7403dc5203fbe4be60a4"
+      }
+    },
+    "vrch.path-blur-dissolve": {
+      "1.0.1": {
+        "sha256": "67684c64905b02eda76f793707b347ca1c9c5ac8ebe89250a2b23b1cf913e504",
+        "size": 126098,
+        "package_digest": "ae043d5b8d1c739e6db8f1681ec956278e0f809ac8e787b4bad2e2602836e9df"
+      }
+    },
+    "user.vp-print-echo": {
+      "1.0.1": {
+        "sha256": "0655c385bb1d8cbaccc0e3fa803394b1a44f60d1633fb4710e76402b48b79ffe",
+        "size": 50054,
+        "package_digest": "5d27ae0171515e5947dab286cc36a31c04ba4430593c8039f4f26a0719c4c380"
+      }
+    },
+    "user.vp-prism-corridor": {
+      "1.0.0": {
+        "sha256": "663db57dc8b4d19cf9411bcf8ec14a8007c93f7442c7c664afc6d37c342c9c5e",
+        "size": 11357,
+        "package_digest": "49c5cf7116a9c99dcb2018d2f8398c0629ce855f912900cda21ab8107677950a"
+      }
+    },
+    "vrch.procedural-field": {
+      "1.0.1": {
+        "sha256": "1bd0b75b82f3bdceb09dcb6ad24f9a618450e450c2feb9732a33eef494ae73d2",
+        "size": 93321,
+        "package_digest": "32e4ae75ed17bc72f2e7eebaa2b7d58ff0455818402657636eaa220b6b19489e"
+      }
+    },
+    "vrch.procedural-reveal": {
+      "1.0.1": {
+        "sha256": "9f4eaee774a01fb69d18dfad61af66d32951f7ef1006799ec568aaf3216f01f3",
+        "size": 225977,
+        "package_digest": "2613cd070994ec955503201619c67529e04c9d8cea7d6e034f74c3be1aacf167"
+      }
+    },
+    "user.vp-pulse-ridges": {
+      "1.0.1": {
+        "sha256": "258863d7e29beee76c5126b151dd35af138be2135e5066d0be0e59a79ab6e11c",
+        "size": 35682,
+        "package_digest": "6542be927036e0f86a7b9acc99470510f0e215b9fa5d7bdc8ef14fa5abb42924"
+      }
+    },
+    "user.vp-radial-repeat": {
+      "1.0.1": {
+        "sha256": "52de4156d395992b72baa00a8609100d39ad32328b3418001a73316c127e9993",
+        "size": 55754,
+        "package_digest": "c0e615e8a2f2abb0b00924fe1db7ebd8dff22e15c2f7b38a3eae7ba74c789935"
+      }
+    },
+    "user.vp-rain-glass": {
+      "1.0.1": {
+        "sha256": "18ee72286ffc0b60e3df1c4dd87e88c5f41d7ca56b89ed2e086e62db2afd1f65",
+        "size": 73717,
+        "package_digest": "3a308515e687472959822308651179fea86479af4798530188b7e5f23ce3c33c"
+      }
+    },
+    "user.vp-rhythm-press": {
+      "1.0.1": {
+        "sha256": "aab33ba357f1be2315ff8b38746eac04671b3fa37df1c4a106431daacc8fd65f",
+        "size": 61342,
+        "package_digest": "22d7def623834c1f206b79c2b206dea7ffef25b947372118fbaf5627789c8b5d"
+      }
+    },
+    "vrch.single-row-stretch": {
+      "1.0.1": {
+        "sha256": "a5375fd966cc6adefc51e21cd05406f3f9b3e05ded3e755c8fe28eae304a3ae4",
+        "size": 166010,
+        "package_digest": "03f16e370e7ef387ae6b218ebf879f94dc1f4f7351459842c4b837c18f69fbce"
+      }
+    },
+    "user.vp-solar-flare": {
+      "1.0.1": {
+        "sha256": "508732e5dd5597f1dc8571b1408fe7103d38e9a723e9ca7a34432cf46c9cebee",
+        "size": 42553,
+        "package_digest": "ce3bf017d585288a4c61038073f2274c76a8f6adc935f71533e7ea3c98021e81"
+      }
+    },
+    "user.vp-spectral-ribbons": {
+      "1.0.1": {
+        "sha256": "b5e4bc9a0676e5f1f9c5dbdf30323bdb9e09f61e93d058b0ab74bddd2bb2c9a6",
+        "size": 34841,
+        "package_digest": "7398baeb3aaf6234c282df9c27316816be0309169a40d130b01544edeb61538f"
+      }
+    },
+    "vrch.stamp": {
+      "1.0.1": {
+        "sha256": "6da00a00c4fafa8eb43b37675fb4195ce67372f9ea05d371ad566d27a3a8681c",
+        "size": 125846,
+        "package_digest": "11415350605e0071c257a65b7ad94d2a723ebcb2b3bf431df86f76f4a2e1fa52"
+      }
+    },
+    "user.vp-tidal-light": {
+      "1.0.1": {
+        "sha256": "87825284912fa0891da31cca2a2f13f288501ee9f7c80d449d36966f2874255c",
+        "size": 32384,
+        "package_digest": "06923c45228c3219feea6309ffbe4742758fb4ab90aa494666ebfb6f4e5966de"
+      }
+    },
+    "vrch.volumetric-pyramid": {
+      "1.0.0": {
+        "sha256": "32080ae0cedcde8988372d9ed38b22e9ddec0abb3ecad3e5694074b6a82127df",
+        "size": 9300,
+        "package_digest": "2b8491074cdf1ef0e6d30c70d23527b6093a84463b4f81d47029f942da5666d1"
+      }
+    },
+    "user.vp-warp-drive": {
+      "1.0.1": {
+        "sha256": "70512fe3e8517c58727a642a2a79808ad67ed47d7a0d520e9655f58e118294a1",
+        "size": 54993,
+        "package_digest": "5fc07a0312fafc8a4ed4fee0a254149c8bd22a52a2b0b18d3b7801520ef7df53"
       }
     }
   }
