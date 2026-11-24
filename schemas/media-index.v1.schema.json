@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "role": {
+            "const": "source-image"
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^media/.+\\.(webp|png|jpg|jpeg)$"
+          },
+          "slots": {
+            "type": "array",
+            "items": {
+              "enum": [
+                0,
+                1
+              ]
+            },
+            "minItems": 1,
+            "maxItems": 2,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "id",
+          "role",
+          "path",
+          "slots"
+        ]
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "items"
+  ]
+}

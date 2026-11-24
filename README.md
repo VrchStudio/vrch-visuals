@@ -20,7 +20,7 @@ python3 tools/visuals.py export --output-dir /tmp/visuals-pages-export
 `check` validates definitions with the public JavaScript contract and its bundled
 schemas, recomputes JCS SHA-256, checks enabled signals and analysis kinds, catalog
 references, metadata, thumbnail ownership and the pinned migration provenance kinds.
-The resource descriptor schema is draft **0**; it is not a published release manifest.
+Published v0 visual descriptors remain immutable. The v1 schema can describe a work separately from its rendering definition.
 
 `export` writes 117 owned files in the existing Pages layout: 57 source definitions,
 57 thumbnails, and `selection.json`, `audio-mapping-v2.json`, `order.json`. It checks
@@ -53,6 +53,25 @@ Only maintainers contribute in this first phase; external pull requests are not
 accepted yet. Publisher, free tier, and execution trust are separate: the 22
 `user.vp-*` definitions retain their original untrusted provenance. They do not gain
 execution privileges because this is an official repository.
+
+## Portable visuals
+
+Beginning with 1.1.0, each release lists the individual .visual downloads alongside
+the full library ZIP. Each single includes its original files, descriptor and license.
+Given an official release manifest, compare a source checkout for that release with
+a projection from its published archive:
+
+```sh
+python3 tools/visuals.py pack mosaic --release release.json --output-dir /tmp/from-source
+python3 tools/visuals.py pack-from-bundle mosaic --release release.json --archive vrch-visuals-1.0.2.zip --output-dir /tmp/from-bundle
+python3 tools/visuals.py verify /tmp/from-source/vrch.mosaic-1.0.1.visual --release release.json
+```
+
+The archive filename uses the work's version. The independent JavaScript reader checks
+the deterministic ZIP layout, CRC, descriptor, definition identity and portable digest.
+For offline candidate builds, pass `--history-dir` with official manifests and archives
+in version-named subdirectories. A local `build --preview` can exercise richer v1 works;
+the publishing workflow applies the current consumer compatibility checks.
 
 ## Verify and publish
 

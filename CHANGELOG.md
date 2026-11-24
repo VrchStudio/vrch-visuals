@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.0]
+
+- Download each official visual as a self-contained, reproducible .visual file from the release directory.
+
 ## [1.0.2]
 
 - New previews for the Foundations and Demos visuals and the catalog images, drawn the same way as the Curated ones; none shows a person. The tracker line drawings stay.

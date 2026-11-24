@@ -49,13 +49,32 @@ def local_file(root, relative):
     return target
 
 
+def visual_id(meta):
+    return meta['id'] if meta['schema_version'] == 0 else meta['visual_id']
+
+
+def legacy_compatible(folder, meta, definition):
+    return (visual_id(meta) == definition['scene_id'] and not any(
+        (folder/name).exists() for name in ('look.json', 'treatment.json', 'media/index.json')))
+
+
 def metadata(root=ROOT):
     result = {}
     for folder in sorted((root / 'visuals').iterdir()):
         require(folder.is_dir() and not folder.is_symlink(), 'Unexpected visual entry: ' + folder.name)
-        require(set(p.name for p in folder.iterdir()) == {'definition.json', 'visual.json', 'CHANGELOG.md'}, 'Incomplete or unexpected resource files: ' + folder.name)
         item = read(local_file(root, f'visuals/{folder.name}/visual.json'))
-        Draft202012Validator(read(root / 'schemas/visual-meta.v0.schema.json')).validate(item)
+        basic = {'definition.json', 'visual.json', 'CHANGELOG.md'}
+        names = {p.name for p in folder.iterdir()}
+        require(basic <= names, 'Incomplete resource files: ' + folder.name)
+        if item['schema_version'] == 0:
+            require(names == basic, 'Incomplete or unexpected resource files: ' + folder.name)
+            schema = 'visual-meta.v0'
+        else:
+            schema = 'visual-package.v1'
+            require(not (names & {'resource.json', 'signatures'}), 'Generated files in visual source')
+            require(item.get('publisher') == 'vrch' and item.get('license') == 'MIT' and item.get('tier') == 'free',
+                    'Only official free licensed works may be published')
+        Draft202012Validator(read(root / ('schemas/'+schema+'.schema.json'))).validate(item)
         result[folder.name] = item
     require(bool(result), 'No visual resources found')
     return result
@@ -64,7 +83,8 @@ def metadata(root=ROOT):
 def owned_files(root=ROOT):
     """Adapter from independent resources to the unchanged Pages source layout."""
     files = {f'visuals/{slug}/definition.json': f'{PAGES_PRESETS}/definitions/{slug}.definition.json'
-             for slug in metadata(root)}
+             for slug, meta in metadata(root).items()
+             if meta['schema_version'] == 0 or legacy_compatible(root/'visuals'/slug, meta, read(root/'visuals'/slug/'definition.json'))}
     files.update({f'catalog/{name}': f'{PAGES_PRESETS}/{name}'
                   for name in ('selection.json', 'audio-mapping-v2.json', 'order.json')})
     files.update({f'thumbnails/{p.name}': f'static/scenes/v1/thumbnails/{p.name}'
@@ -72,7 +92,7 @@ def owned_files(root=ROOT):
     return files
 
 
-def check(root=ROOT):
+def check(root=ROOT, *, preview=False):
     engine = read(root / 'engine/ENGINE_SOURCE.json')
     require(set(engine['files']) == ENGINE_FILES, 'Engine whitelist changed')
     require({p.name for p in (root / 'engine').iterdir()} == ENGINE_FILES | {'ENGINE_SOURCE.json'}, 'Unexpected engine files')
@@ -94,19 +114,22 @@ def check(root=ROOT):
     order = read(root / 'catalog/order.json')
     audio = read(root / 'catalog/audio-mapping-v2.json')
     ids = {d['scene_id'] for d in definitions.values()}
-    require(len(ids) == len(definitions), 'Duplicate scene_id')
+    identities = {visual_id(meta) for meta in records.values()}
+    require(len(identities) == len(records), 'Duplicate visual_id')
+    require(len({(row['id'],row['content_hash']) for row in engine_result['results']}) == len(ids),
+            'Conflicting definitions for the same scene_id')
     retained = set(baseline['pages_retained_ids'])
-    require(not ids & retained and set(order) == ids | retained, 'Order must cover the library and all six Pages fixtures')
+    require(not identities & retained and set(order) == identities | retained, 'Order must cover the library and all six Pages fixtures')
     require(all(type(i) is int for i in order.values()) and sorted(order.values()) == list(range(len(order))), 'Order positions must be unique and contiguous')
     collections = [item['id'] for item in selection['collections']]
     groups = [item['id'] for item in selection['groups']]
     families = [item['id'] for item in selection['families']]
     require(len(collections) == len(set(collections)) and len(groups) == len(set(groups)) and len(families) == len(set(families)), 'Duplicate selection grouping')
     selected = set()
-    thumbnail_refs = {sid: set() for sid in ids}
+    thumbnail_refs = {identifier: set() for identifier in identities}
     for item in selection['items']:
-        sid = item['scene_id']
-        require(sid in ids and sid not in selected, 'Unknown/duplicate selected visual: ' + sid)
+        sid = item.get('visual_id', item.get('scene_id'))
+        require(sid in identities and sid not in selected, 'Unknown/duplicate selected visual: ' + sid)
         selected.add(sid)
         require(item['collection'] in collections, 'Unknown collection')
         require('group' not in item or item['group'] in groups, 'Unknown group')
@@ -119,11 +142,20 @@ def check(root=ROOT):
         validator.validate(definition)
         meta = records[slug]
         sid = definition['scene_id']
-        require(meta['id'] == sid, slug + ': metadata ID differs')
+        identifier = visual_id(meta)
+        if meta['schema_version'] == 0:
+            require(identifier == sid, slug + ': metadata ID differs')
+        else:
+            import visual_packages as vp
+            vp.check_sections(root, slug, meta, definition)
+            require(preview or legacy_compatible(root/'visuals'/slug, meta, definition),
+                    slug + ': consumer support required before publication')
         require(meta['content_hash'] == checked[sid]['content_hash'], slug + ': JCS hash differs')
         kind = definition['provenance']['kind']
         require(meta['provenance']['kind'] == kind, slug + ': provenance differs from metadata')
         require(sid not in baseline['visuals'] or baseline['visuals'][sid]['provenance_kind'] == kind, slug + ': pinned provenance changed')
+        if meta['schema_version'] == 1:
+            continue
         if definition['catalog']['thumbnail_ref']:
             thumbnail_refs[sid].add(definition['catalog']['thumbnail_ref'])
         names = set()
@@ -152,6 +184,8 @@ def check(root=ROOT):
     Draft202012Validator.check_schema(descriptor_schema)
     for slug, definition in definitions.items():
         meta = records[slug]
+        if meta['schema_version'] == 1:
+            continue  # The complete descriptor is validated at build time.
         files = [('definition', f'visuals/{slug}/definition.json')] + [('thumbnail', 'thumbnails/' + name) for name in meta['thumbnails']]
         descriptor = {'schema_version': 0, 'kind': 'visual', 'id': meta['id'], 'publisher': meta['publisher'], 'name': definition['title'], 'version': meta['version'], 'tier': meta['tier'], 'license': meta['license'], 'digest': {'algorithm': 'jcs-sha256', 'value': meta['content_hash'].removeprefix('sha256:')}, 'requires': checked[meta['id']]['requires'], 'files': [{'role': role, 'path': name, 'sha256': sha(root / name), 'size': (root / name).stat().st_size} for role, name in files], 'provenance': {'repository': 'VrchStudio/vrch-visuals', 'derived_from': []}, 'signatures': []}
         Draft202012Validator(descriptor_schema).validate(descriptor)
@@ -192,6 +226,22 @@ def main():
     for name in ('build', 'release', 'publish'):
         sub = commands.add_parser(name)
         sub.add_argument('--version', required=True)
+        if name == 'build':
+            sub.add_argument('--output-dir', type=Path)
+            sub.add_argument('--history-dir', type=Path)
+            sub.add_argument('--preview', action='store_true', help='Build an unpublished consumer-compatibility sample')
+    for name in ('pack', 'pack-from-bundle', 'verify'):
+        sub = commands.add_parser(name)
+        sub.add_argument('--release', required=True, type=Path, help='Verified release.json')
+        if name == 'verify':
+            sub.add_argument('file', type=Path)
+        else:
+            sub.add_argument('slug')
+            sub.add_argument('--output-dir', required=True, type=Path)
+            if name == 'pack':
+                sub.add_argument('--source-root', type=Path, default=ROOT)
+            else:
+                sub.add_argument('--archive', required=True, type=Path)
     sub = commands.add_parser('extract')
     sub.add_argument('slug')
     sub.add_argument('--archive', required=True, type=Path)
@@ -202,7 +252,31 @@ def main():
     sub.add_argument('--write', action='store_true')
     args = parser.parse_args()
     try:
-        if args.command == 'engine-sync':
+        if args.command in ('pack', 'pack-from-bundle', 'verify'):
+            import releases
+            import visual_packages as vp
+            import zipfile
+            release = read(args.release)
+            historical = releases.load_index()['versions'].get(release['version'])
+            if historical:
+                require(sha(args.release) == historical['release']['sha256'], 'Published release manifest differs')
+            if args.command == 'verify':
+                result = json.loads(subprocess.check_output(['node', str(ROOT/'tools/verify_visual.mjs'),
+                                    str(args.release.resolve()), str(args.file.resolve())], text=True))
+            else:
+                item = vp.resource_map(release)[args.slug]
+                if args.command == 'pack':
+                    entries = vp.from_source(args.source_root, release, args.slug, item)
+                else:
+                    require(sha(args.archive) == release['archive']['sha256'] and
+                            args.archive.stat().st_size == release['archive']['size'], 'Archive differs from release')
+                    with zipfile.ZipFile(args.archive) as archive:
+                        entries = vp.from_archive(archive, release, args.slug, item)
+                output = args.output_dir / (item['id']+'-'+item['version']+'.visual')
+                data = vp.zip_bytes(entries)
+                vp.atomic_write(output, data)
+                result = {'file': str(output), 'package_digest': vp.package_digest(entries), **vp.stamp(data)}
+        elif args.command == 'engine-sync':
             import releases
             result = releases.engine_sync(args.pages_root, args.ref, args.write)
         elif args.command == 'extract':
@@ -211,13 +285,13 @@ def main():
         elif args.command in ('build', 'release', 'publish'):
             import releases
             if args.command == 'build':
-                package, release, record = releases.build(args.version)
+                package, release, record = releases.build(args.version, output=args.output_dir, history_dir=args.history_dir, preview=args.preview)
                 result = {'archive': str(package), 'sha256': record['archive']['sha256']}
             else:
                 result = releases.dispatch(args.version) if args.command == 'release' else releases.publish(args.version)
         else:
             result = check() if args.command == 'check' else export(args.output_dir)
-    except (ValueError, KeyError, OSError) as error:
+    except (ValueError, KeyError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f'{error}\n')
     print(json.dumps(dict(ok=True, **result), indent=2))
 
